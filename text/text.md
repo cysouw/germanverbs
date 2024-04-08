@@ -51,46 +51,41 @@ Sijs, Nicoline van der (samensteller) (2010), Etymologiebank, op https://etymolo
 
 Some verb stems only occur with a fixed prefix, i.e. these verbs cannot occur without a prefix. In total there are 685 such examples (20% of all verb stems), which come in various different guises. The major division is between transparant and fossilised fixed-prefix verbs. Transparent fixed-prefix verbs have a stem that exist elsewhere in the German language, while fossilised fixed-prefix verbs have a stem that does not (anymore) exist outside of the prefixed combination. The frequencies of the different kinds of fixed-prefix verbs are summarised in [@tbl:fixed-prefix] and will be discussed in more detail in subsequent sections.
 
-| Fixed-prefix structure | Frequency
-| - | -
-| Transparent, with noun stem | 390 (12%)^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`]
+| Fixed-prefix verbs | Frequency
+| ------ | :-:
+| Transparent, with noun stem | 390 (12%)
 | Transparent, with adjective stem | 195 (6%)^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`]
 | Transparent, with other stem | 15 (<1%)^[`SELECT * WHERE like(a.VERB, "%- %") && a.WEITERE != " "`]
 | Transparently related to other verb | 20 (<1%)^[`SELECT * WHERE like(a.VERB, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% Ge- %") || like(a.NOMEN, "% (%")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
-| Fossilised, with a fossilised prefix-noun | 15 (<1%)^[`SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% (%") && !like(a.NOMEN, "% Ge- %")`]
+| Fossilised, including a fossilised prefix-noun | 15 (<1%)^[`SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% (%") && !like(a.NOMEN, "% Ge- %")`]
 | Fossilised, without a fossilised prefix-noun | 50 (2%)^[`SELECT * WHERE like(a.STAMM, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
-| - | -
-| Total | 620 (20%)
+| **Total** | **685** (20%)
 
 Table: Frequencies of different kinds of fixed-prefix structure {#tbl:fixed-prefix}
 
 ### Transparent fixed-prefix verbs {#prefix:transparent}
 
-The largest group of fixed-prefix verbs transparently include a stem that exists elsewhere in the German language. This occurs in 620 examples (18%).^[SELECT * WHERE like(a.VERB, "%- %").] Most frequently (390 examples), these transparent prefix-verbs are based on noun roots like *Feind* 'enemy' that can be used as a verb with various prefixes, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any prefix does not exist.
+The largest group of fixed-prefix verbs transparently include a stem that exists elsewhere in the German language (620 examples, 18%).^[`SELECT * WHERE like(a.VERB, "%- %")`] Most frequently (390 examples, 12%), these transparent prefix-verbs are based on noun roots.^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`] For example, a noun like *Feind* 'enemy' can be used as a verb with various prefixes, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any prefix does not exist.
 
 verb-related:
 
-- bluff-en > ver-blüff-en
-- eumel-n > be-ömmel-n
-- fledder-n > zer-fleder-n
-- kau-en > wieder-käu-en
-- rumpel-n > ent-rümpel-n
-- sauf-en > er-säuf-en
-- sühn-en > ver-söhn-en
-
-- schlaf-en > ein-schläf-er-n
-- walt-en > be-wält-ig-en
-
-- latsch-en > be-latsch-er-n
-- wieg-en > ab-wieg-el-n
-- schaff-en > be-schäff-tig-en
-
-- hump-el-n > be-hum-s-en
-- lech-z-en > ver-lech-en
-- rütt-el-n > zer-rütt-en
-- watsch-el-n > ab-watsch-en
-
-- tüder-en > be-tüter-n
+- *bluff-en > ver-blüff-en*
+- *eumel-n > be-ömmel-n*
+- *fledder-n > zer-fleder-n*
+- *kau-en > wieder-käu-en*
+- *rumpel-n > ent-rümpel-n*
+- *sauf-en > er-säuf-en*
+- *sühn-en > ver-söhn-en*
+- *schlaf-en > ein-schläf-er-n*
+- *walt-en > be-wält-ig-en*
+- *latsch-en > be-latsch-er-n*
+- *wieg-en > ab-wieg-el-n*
+- *schaff-en > be-schäff-tig-en*
+- *hump-el-n > be-hum-s-en*
+- *lech-z-en > ver-lech-en*
+- *rütt-el-n > zer-rütt-en*
+- *watsch-el-n > ab-watsch-en*
+- *tüder-en > be-tüter-n*
 
 ### Fossilised fixed-prefix verbs {#prefix:fossilised}
 

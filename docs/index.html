@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael Cysouw" />
-  <meta name="dcterms.date" content="2024-04-05" />
+  <meta name="dcterms.date" content="2024-04-08" />
   <title>A morphological dictionary of German verbs</title>
   <style>
 html {
@@ -213,6 +213,7 @@ font-style: normal;
 h1, h2, h3 {
 text-indent: -50px;
 padding-left: 50px;
+hyphens: none;
 }
 #title-block-header {
 text-indent: 0;
@@ -537,7 +538,7 @@ vertical-align: top;
 <h1 class="title">A morphological dictionary of German verbs</h1>
 <p class="author">Michael Cysouw</p>
 <p class="notice">Prepublication draft, do not cite!</p>
-<p class="date">April 5, 2024</p>
+<p class="date">April 8, 2024</p>
 <p class="series">Series To Be Determined</p>
 </header>
 <nav id="TOC" role="doc-toc">
@@ -672,86 +673,82 @@ data-download from Wiktionary</p>
 <table>
 <caption>Table 3.1: Frequencies of different kinds of fixed-prefix structure</caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 66%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Fixed-prefix structure</th>
-<th>Frequency</th>
+<th>Fixed-prefix verbs</th>
+<th style="text-align: center;">Frequency</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Transparent, with noun stem</td>
-<td>390 (12%)<span id="fn1"><label for="fn1-toggle" class="fn-number"><sup>1</sup></label>
-<input type="checkbox" hidden id="fn1-toggle"></input>
-<span id="fn1-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.NOMEN != &quot; &quot; &amp;&amp; !like(a.NOMEN, &quot;% -ung %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% Ge- %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% (%&quot;)</code></span></span></td>
+<td style="text-align: center;">390 (12%)</td>
 </tr>
 <tr class="even">
 <td>Transparent, with adjective stem</td>
-<td>195 (6%)<span id="fn2"><label for="fn2-toggle" class="fn-number"><sup>2</sup></label>
-<input type="checkbox" hidden id="fn2-toggle"></input>
-<span id="fn2-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.ADJEKTIV != &quot; &quot;</code></span></span></td>
+<td style="text-align: center;">195 (6%)<span id="fn1"><label for="fn1-toggle" class="fn-number"><sup>1</sup></label>
+<input type="checkbox" hidden id="fn1-toggle"></input>
+<span id="fn1-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.ADJEKTIV != &quot; &quot;</code></span></span></td>
 </tr>
 <tr class="odd">
 <td>Transparent, with other stem</td>
-<td>15 (&lt;1%)<span id="fn3"><label for="fn3-toggle" class="fn-number"><sup>3</sup></label>
-<input type="checkbox" hidden id="fn3-toggle"></input>
-<span id="fn3-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.WEITERE != &quot; &quot;</code></span></span></td>
+<td style="text-align: center;">15 (&lt;1%)<span id="fn2"><label for="fn2-toggle" class="fn-number"><sup>2</sup></label>
+<input type="checkbox" hidden id="fn2-toggle"></input>
+<span id="fn2-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.WEITERE != &quot; &quot;</code></span></span></td>
 </tr>
 <tr class="even">
 <td>Transparently related to other verb</td>
-<td>20 (&lt;1%)<span id="fn4"><label for="fn4-toggle" class="fn-number"><sup>4</sup></label>
-<input type="checkbox" hidden id="fn4-toggle"></input>
-<span id="fn4-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; (a.NOMEN == &quot; &quot; || like(a.NOMEN, &quot;% -ung %&quot;) || like(a.NOMEN, &quot;% Ge- %&quot;) || like(a.NOMEN, &quot;% (%&quot;)) &amp;&amp; a.ADJEKTIV == &quot; &quot; &amp;&amp; a.WEITERE == &quot; &quot;</code></span></span></td>
+<td style="text-align: center;">20 (&lt;1%)<span id="fn3"><label for="fn3-toggle" class="fn-number"><sup>3</sup></label>
+<input type="checkbox" hidden id="fn3-toggle"></input>
+<span id="fn3-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; (a.NOMEN == &quot; &quot; || like(a.NOMEN, &quot;% -ung %&quot;) || like(a.NOMEN, &quot;% Ge- %&quot;) || like(a.NOMEN, &quot;% (%&quot;)) &amp;&amp; a.ADJEKTIV == &quot; &quot; &amp;&amp; a.WEITERE == &quot; &quot;</code></span></span></td>
 </tr>
 <tr class="odd">
-<td>Fossilised, with a fossilised prefix-noun</td>
-<td>15 (&lt;1%)<span id="fn5"><label for="fn5-toggle" class="fn-number"><sup>5</sup></label>
-<input type="checkbox" hidden id="fn5-toggle"></input>
-<span id="fn5-content" class="footnote"><code>SELECT * WHERE like(a.STAMM, &quot;%- %&quot;) &amp;&amp; !like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.NOMEN != &quot; &quot; &amp;&amp; !like(a.NOMEN, &quot;% -ung %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% (%&quot;) &amp;&amp; !like(a.NOMEN, &quot;% Ge- %&quot;)</code></span></span></td>
+<td>Fossilised, including a fossilised prefix-noun</td>
+<td style="text-align: center;">15 (&lt;1%)<span id="fn4"><label for="fn4-toggle" class="fn-number"><sup>4</sup></label>
+<input type="checkbox" hidden id="fn4-toggle"></input>
+<span id="fn4-content" class="footnote"><code>SELECT * WHERE like(a.STAMM, &quot;%- %&quot;) &amp;&amp; !like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.NOMEN != &quot; &quot; &amp;&amp; !like(a.NOMEN, &quot;% -ung %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% (%&quot;) &amp;&amp; !like(a.NOMEN, &quot;% Ge- %&quot;)</code></span></span></td>
 </tr>
 <tr class="even">
 <td>Fossilised, without a fossilised prefix-noun</td>
-<td>50 (2%)<span id="fn6"><label for="fn6-toggle" class="fn-number"><sup>6</sup></label>
-<input type="checkbox" hidden id="fn6-toggle"></input>
-<span id="fn6-content" class="footnote"><code>SELECT * WHERE like(a.STAMM, &quot;%- %&quot;) &amp;&amp; (a.NOMEN == &quot; &quot; || like(a.NOMEN, &quot;% -ung %&quot;) || like(a.NOMEN, &quot;% (%&quot;) || like(a.NOMEN, &quot;% Ge- %&quot;)) &amp;&amp; a.ADJEKTIV == &quot; &quot; &amp;&amp; a.WEITERE == &quot; &quot;</code></span></span></td>
+<td style="text-align: center;">50 (2%)<span id="fn5"><label for="fn5-toggle" class="fn-number"><sup>5</sup></label>
+<input type="checkbox" hidden id="fn5-toggle"></input>
+<span id="fn5-content" class="footnote"><code>SELECT * WHERE like(a.STAMM, &quot;%- %&quot;) &amp;&amp; (a.NOMEN == &quot; &quot; || like(a.NOMEN, &quot;% -ung %&quot;) || like(a.NOMEN, &quot;% (%&quot;) || like(a.NOMEN, &quot;% Ge- %&quot;)) &amp;&amp; a.ADJEKTIV == &quot; &quot; &amp;&amp; a.WEITERE == &quot; &quot;</code></span></span></td>
 </tr>
 <tr class="odd">
-<td>-</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>Total</td>
-<td>620 (20%)</td>
+<td><strong>Total</strong></td>
+<td style="text-align: center;"><strong>685</strong> (20%)</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h3 data-number="3.1.1" label="3.1.1" id="sec3.1.1"><span class="header-section-number">3.1.1</span> Transparent fixed-prefix verbs</h3>
-<p><span id="3.3" class="paragraph-number">[3.3]</span> The largest group of fixed-prefix verbs transparently include a stem that exists elsewhere in the German language. This occurs in 620 examples (18%).<span id="fn7"><label for="fn7-toggle" class="fn-number"><sup>7</sup></label>
+<p><span id="3.3" class="paragraph-number">[3.3]</span> The largest group of fixed-prefix verbs transparently include a stem that exists elsewhere in the German language (620 examples, 18%).<span id="fn6"><label for="fn6-toggle" class="fn-number"><sup>6</sup></label>
+<input type="checkbox" hidden id="fn6-toggle"></input>
+<span id="fn6-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;)</code></span></span> Most frequently (390 examples, 12%), these transparent prefix-verbs are based on noun roots.<span id="fn7"><label for="fn7-toggle" class="fn-number"><sup>7</sup></label>
 <input type="checkbox" hidden id="fn7-toggle"></input>
-<span id="fn7-content" class="footnote">SELECT * WHERE like(a.VERB, “%- %”).</span></span> Most frequently (390 examples), these transparent prefix-verbs are based on noun roots like <em>Feind</em> ‘enemy’ that can be used as a verb with various prefixes, like <em>anfeinden</em> ‘treat hostile’, <em>befeinden</em> ‘be hostile’ or <em>verfeinden</em> ‘be enemies’. In contrast, a verb *<em>feinden</em> without any prefix does not exist.</p>
+<span id="fn7-content" class="footnote"><code>SELECT * WHERE like(a.VERB, &quot;%- %&quot;) &amp;&amp; a.NOMEN != &quot; &quot; &amp;&amp; !like(a.NOMEN, &quot;% -ung %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% Ge- %&quot;) &amp;&amp; !like(a.NOMEN, &quot;% (%&quot;)</code></span></span> For example, a noun like <em>Feind</em> ‘enemy’ can be used as a verb with various prefixes, like <em>anfeinden</em> ‘treat hostile’, <em>befeinden</em> ‘be hostile’ or <em>verfeinden</em> ‘be enemies’. In contrast, a verb *<em>feinden</em> without any prefix does not exist.</p>
 <p><span id="3.4" class="paragraph-number">[3.4]</span> verb-related:</p>
 <ul>
-<li><p>bluff-en &gt; ver-blüff-en</p></li>
-<li><p>eumel-n &gt; be-ömmel-n</p></li>
-<li><p>fledder-n &gt; zer-fleder-n</p></li>
-<li><p>kau-en &gt; wieder-käu-en</p></li>
-<li><p>rumpel-n &gt; ent-rümpel-n</p></li>
-<li><p>sauf-en &gt; er-säuf-en</p></li>
-<li><p>sühn-en &gt; ver-söhn-en</p></li>
-<li><p>schlaf-en &gt; ein-schläf-er-n</p></li>
-<li><p>walt-en &gt; be-wält-ig-en</p></li>
-<li><p>latsch-en &gt; be-latsch-er-n</p></li>
-<li><p>wieg-en &gt; ab-wieg-el-n</p></li>
-<li><p>schaff-en &gt; be-schäff-tig-en</p></li>
-<li><p>hump-el-n &gt; be-hum-s-en</p></li>
-<li><p>lech-z-en &gt; ver-lech-en</p></li>
-<li><p>rütt-el-n &gt; zer-rütt-en</p></li>
-<li><p>watsch-el-n &gt; ab-watsch-en</p></li>
-<li><p>tüder-en &gt; be-tüter-n</p></li>
+<li><em>bluff-en &gt; ver-blüff-en</em></li>
+<li><em>eumel-n &gt; be-ömmel-n</em></li>
+<li><em>fledder-n &gt; zer-fleder-n</em></li>
+<li><em>kau-en &gt; wieder-käu-en</em></li>
+<li><em>rumpel-n &gt; ent-rümpel-n</em></li>
+<li><em>sauf-en &gt; er-säuf-en</em></li>
+<li><em>sühn-en &gt; ver-söhn-en</em></li>
+<li><em>schlaf-en &gt; ein-schläf-er-n</em></li>
+<li><em>walt-en &gt; be-wält-ig-en</em></li>
+<li><em>latsch-en &gt; be-latsch-er-n</em></li>
+<li><em>wieg-en &gt; ab-wieg-el-n</em></li>
+<li><em>schaff-en &gt; be-schäff-tig-en</em></li>
+<li><em>hump-el-n &gt; be-hum-s-en</em></li>
+<li><em>lech-z-en &gt; ver-lech-en</em></li>
+<li><em>rütt-el-n &gt; zer-rütt-en</em></li>
+<li><em>watsch-el-n &gt; ab-watsch-en</em></li>
+<li><em>tüder-en &gt; be-tüter-n</em></li>
 </ul>
 <h3 data-number="3.1.2" label="3.1.2" id="sec3.1.2"><span class="header-section-number">3.1.2</span> Fossilised fixed-prefix verbs</h3>
 <p><span id="3.5" class="paragraph-number">[3.5]</span> fossilised verb roots (50 examples)<span id="fn8"><label for="fn8-toggle" class="fn-number"><sup>8</sup></label>
