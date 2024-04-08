@@ -1,0 +1,147 @@
+be (425)
+ent/emp (172+3)
+er (228)
+ver (684)
+zer (86)
+
+ge (18)
+miss (16)
+wider (10)
+
+ab (339)
+an (243)
+auf (213)
+aus (240)
+bei (29)
+durch (96)
+ein (231)
+nach (80)
+über (118)
+um (110)
+unter (56)
+vor (74)
+zu (102)
+
+mit (35)
+gegen (14)
+hinter (6)
+zwischen (3)
+für (2)
+
+mit-an-sehen
+mit-ein-schließen
+über-ein-kommen
+über-ein-stimmen
+über-ein-treffen
+
+
+
+
+ent-gegen (10-65)
+ent-lang (2-39)
+gegen-über (2-6)
+hint-an (7-4)
+hinten-über (0-6)
+hinter-drein (0-4)
+vor-an (6-18)
+vor-aus (11-35)
+vor-bei (6-100)
+vor-über (2-49)
+über-ein (2-4)
+zu-vor (3)
+ver-ab (6)
+ver-an (4)
+ver-aus (2)
+vorn-über (0-6)
+
+bevor (stehen)
+bei-seite (legen)
+vor-weg (nehmen)
+zu-gute (kommen)
+zu-nichte (machen)
+zu-pass (kommen)
+zu-wider (handeln)
+ur-auf (führen)
+
+empor (12)
+nieder (24)
+weg (58)
+zurück/rück (52+36)
+wieder (23)
+zusammen (57)
+inne (4)
+
+aus-einander (54)
+durch-einander (32)
+an-einander (22)
+auf-einander (21)
+über-einander (20)
+in-einander (12)
+hinter-einander (12)
+unter-einander (12)
+bei-einander (8)
+gegen-einander (8)
+zu-einander (6)
+mit-einander (6)
+um-einander (4)
+nach-einander (2)
+vor-einander (3)
+von-einander (1)
+
+da
+da-bei
+da-für
+da-her
+da-hin
+da-hinter
+da-neben
+da-r
+da-r-an
+da-r-nieder
+da-r-über
+da-von
+da-zu
+da-zwischen
+
+dr-an
+dr-auf
+
+hier
+hier-her
+
+r-an
+r-aus
+r-ein
+r-über
+r-um
+r-unter
+
+hin
+hin-ab
+hin-auf
+hin-aus
+hin-durch
+hin-ein
+hin-über
+hin-unter
+
+um-hin
+hin-weg
+
+her
+her-ab
+her-auf
+her-aus
+her-ein
+her-über
+her-unter
+
+her-an
+her-bei
+her-um
+her-vor
+
+ein-her
+hinter-her
+um-her
+vor-her
