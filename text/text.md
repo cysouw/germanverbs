@@ -43,53 +43,138 @@ Sijs, Nicoline van der (samensteller) (2010), Etymologiebank, op https://etymolo
 - Ablaut series
 - Nomen agentis always possible?
 
-# Prefixes
+- https://de.wikipedia.org/wiki/Liste_starker_Verben_(deutsche_Sprache)
+- https://grammis.ids-mannheim.de/progr@mm/4074
+- https://www.deutschplus.net/pages/Tabelle_starker_Verben
+
+# Preverbials
+
+## Prefixes, preverbs and directionals
 
 [TODO: summary of prefixes]
 
-## Fixed prefixes {#prefix:fixed}
+## Fixed preverbials {#sec:prefix-fixed}
 
-Some verb stems only occur with a fixed prefix, i.e. these verbs cannot occur without a prefix. In total there are 685 such examples (20% of all verb stems), which come in various different guises. The major division is between transparant and fossilised fixed-prefix verbs. Transparent fixed-prefix verbs have a stem that exist elsewhere in the German language, while fossilised fixed-prefix verbs have a stem that does not (anymore) exist outside of the prefixed combination. The frequencies of the different kinds of fixed-prefix verbs are summarised in [@tbl:fixed-prefix] and will be discussed in more detail in subsequent sections.
+Some verb stems only occur with a fixed preverbial, i.e. these verbs cannot occur without a preverbial. In total there are 685 such examples (20% of all verb stems), which come in various different guises. The major division is between transparant and fossilised fixed-preverbial verbs. Transparent fixed-preverbial verbs have a stem that exist elsewhere in the German language, while fossilised fixed-preverbial verbs have a stem that does not (anymore) exist outside of the preverbial combination. 
+
+The frequencies of the different kinds of fixed-preverbial verbs are summarised in [@tbl:fixed-prefix] and will be discussed in more detail in subsequent sections. First, the transparent fixed-preverbial verbs are summarised in [@sec:prefix-transparent] and the fossiled examples in [@sec:prefix-fossilised]. An extra subsection is added to summarise the few examples among these in which more than one affix is added obligatory, either two prefixes or a prefix and a suffix (see [@sec:prefix-multiple]).
 
 | Fixed-prefix verbs | Frequency
 | ------ | :-:
 | Transparent, with noun stem | 390 (12%)
-| Transparent, with adjective stem | 195 (6%)^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`]
-| Transparent, with other stem | 15 (<1%)^[`SELECT * WHERE like(a.VERB, "%- %") && a.WEITERE != " "`]
-| Transparently related to other verb | 20 (<1%)^[`SELECT * WHERE like(a.VERB, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% Ge- %") || like(a.NOMEN, "% (%")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
-| Fossilised, including a fossilised prefix-noun | 15 (<1%)^[`SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% (%") && !like(a.NOMEN, "% Ge- %")`]
-| Fossilised, without a fossilised prefix-noun | 50 (2%)^[`SELECT * WHERE like(a.STAMM, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
+| Transparent, with adjective stem | 195 (6%)
+| Transparent, with other stem | 15 (<1%)
+| Transparently related to other verb | 20 (<1%)
+| Fossilised, without a fossilised prefix-noun | 50 (2%)
+| Fossilised, including a fossilised prefix-noun | 15 (<1%)
 | **Total** | **685** (20%)
 
-Table: Frequencies of different kinds of fixed-prefix structure {#tbl:fixed-prefix}
+Table: Different kinds of fixed-prefix structure {#tbl:fixed-prefix}
 
-### Transparent fixed-prefix verbs {#prefix:transparent}
+Both non-separable prefixes and separable preverbs occur among the 685 fixed-preverbial verbs, but there is a clear preference for non-separable prefixes. There are 120 examples with separable preverbs, the majority of which have a noun stem [@next].
 
-The largest group of fixed-prefix verbs transparently include a stem that exists elsewhere in the German language (620 examples, 18%).^[`SELECT * WHERE like(a.VERB, "%- %")`] Most frequently (390 examples, 12%), these transparent prefix-verbs are based on noun roots.^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`] For example, a noun like *Feind* 'enemy' can be used as a verb with various prefixes, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any prefix does not exist.
+::: ex
+Fixed-preverbial verbs with separable preverbs:
+:::
 
-verb-related:
+- Noun stem:
+  - 100 examples^[`SELECT * WHERE a.NOMEN != " " && like(a.VERB, "%- %") && !like(a.VERB, "%er- %") && !like(a.VERB, "%e- %") && !like(a.VERB, "%ent- %")`]
+- Adjective stem:
+  - *bieder* > *an-bieder-n*
+  - *englisch* > *ein-englisch-en*
+  - *flau* > *ab-flau-en*
+  - *grob* > *an-grob-s-en*
+  - *klar* > *auf-klar-en*
+  - *mager* > *ab-mager-n*
+  - *rau* > *auf-rau-en*
+  - *schüchtern* > *ein-schüchter-n*
+  - *streng* > *an-streng-en*
+  - *stumpf* *ab-stumpf-en*
+- Other stem:
+  - *Rex* > *ein-rex-en*
+  - *wider* > *an-wider-n*
+  - *ix* > *durch-ix-en*
+- Fossilised stem:
+  - *an-beraum-en*
+  - *aus-merz-en*
+  - *nach-ahm-en*
+- Loans:
+  - *an-törn-en* (< en. "to turn on")
+  - *aus-knock-en* (< en. "to knock out")
 
-- *bluff-en > ver-blüff-en*
-- *eumel-n > be-ömmel-n*
-- *fledder-n > zer-fleder-n*
-- *kau-en > wieder-käu-en*
-- *rumpel-n > ent-rümpel-n*
-- *sauf-en > er-säuf-en*
-- *sühn-en > ver-söhn-en*
-- *schlaf-en > ein-schläf-er-n*
-- *walt-en > be-wält-ig-en*
-- *latsch-en > be-latsch-er-n*
-- *wieg-en > ab-wieg-el-n*
-- *schaff-en > be-schäff-tig-en*
-- *hump-el-n > be-hum-s-en*
-- *lech-z-en > ver-lech-en*
-- *rütt-el-n > zer-rütt-en*
-- *watsch-el-n > ab-watsch-en*
-- *tüder-en > be-tüter-n*
+### Transparent fixed-preverbial verbs {#sec:prefix-transparent}
 
-### Fossilised fixed-prefix verbs {#prefix:fossilised}
+The largest group of fixed-preverbial verbs are transparent, i.e they include a stem that exists elsewhere in the German language (620 examples, 18%).^[`SELECT * WHERE like(a.VERB, "%- %")`] Most frequently, these transparent prefix-verbs are based on a noun root (390 examples, 12%).^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`] For example, a noun like *Feind* 'enemy' can be used as a verb with various preverbials, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 390 examples are part of the total of 1850 verbs that have a noun stem (see [@sec:stem-noun]). The remaining 1460 noun-based verbs can also be used without any preverbial, like *trompeten* 'play the trumpet' from the noun *Trompete* 'trumpet.
 
-fossilised verb roots (50 examples)^[SELECT * WHERE like(a.STAMM, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".]
+The second largest group are fixed-preverbial verbs based on an adjective root (195 examples, 6%).^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`] For example, an adjective like *dumm* 'stupid' can be used as a verb stem with a prefix *verdummen* 'become stultified'. In contrast, the verb \**dummen* without a preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 195 examples are part of a total of 375 verbs that have an adjective stem (see [@sec:stem-adjective]). The remaining 180 adjective-based verbs can also be used without any preverbial, like *dichten* 'to seal' from the adjective *dicht* 'air/watertight'.
+
+A small group of fixed-preverbial verbs have a different stem. This is a heterogeneous group of verb stems, listed in [@next]. Finally, there is a small group of fixed-preverbial verbs that are related to another verb without prefix, listed in [@nnext]. These fixed-preverbial verbs also have other morphological changes, either a change in the stem vowel or a change in the suffix.
+
+::: ex
+Fixed-preverbial verbs based on other stems:^[`SELECT * WHERE like(a.VERB, "%- %") && a.WEITERE != " "`]
+:::
+
+- Name:
+  - *(Johann) Ballhorn* > *ver-ballhorn-en*
+  - *Franz (Pilotenname)* > *ver-franz-en*
+  - *Rex (Einmachgläser)* > *ein-rex-en*
+  - *Zirze (Mythologische Figur)* > *be-zirze-n*
+- Conversational particle:
+  - *amen* > *be-am-en*
+  - *ja* > *be-jah-en*
+  - *nein* > *ver-nein-en*
+- Prepostion:
+  - *gegen* > *ent-gegn-en*
+  - *wider* > *er-wider-n*
+- Adverb:
+  - *genug* > *be-gnüg-en*
+  - *nicht* > *ver-nicht-en*
+- Intensifier:
+  - *sehr* > *ver-sehr-en*
+  - *selbst* > *ent-selbst-en*
+- Numeral:
+  - *zwei* > *ent-zwei-en*
+- Sound:
+  - *ix (Buchstabe)* > *aus/durch-ix-en*
+- Compound:
+  - *(ins) Werk stellen* > *be-werkstell-ig-en*
+
+::: ex
+Fixed-preverbial verbs with additional obligatory morphology:^[`SELECT * WHERE like(a.VERB, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% Ge- %") || like(a.NOMEN, "% (%")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
+:::
+
+- Added preverbial + vowel change
+  - *bluff-en* > *ver-blüff-en*
+  - *eumel-n* > *be-ömmel-n*
+  - *fledder-n* > *zer-fleder-n*
+  - *kau-en* > *wieder-käu-en*
+  - *rumpel-n* > *ent-rümpel-n*
+  - *sauf-en* > *er-säuf-en*
+  - *sühn-en* > *ver-söhn-en*
+- Added preverbial + vowel change + added suffix
+  - *schlaf-en* > *ein-schläf-er-n*
+  - *walt-en* > *be-wält-ig-en*
+  - *schaff-en* > *be-schäff-t-ig-en*
+- Added preverbial + added suffix
+  - *latsch-en* > *be-latsch-er-n*
+  - *wieg-en* > *ab-wieg-el-n*
+- Added preverbial + dropped suffix
+  - *lech-z-en* > *ver-lech-en*
+  - *rütt-el-n* > *zer-rütt-en*
+  - *watsch-el-n* > *ab-watsch-en*
+  - *tüder-en* > *be-tüter-n*
+- Added preverbial + suffix change
+  - *hump-el-n* > *be-hum-s-en*
+
+### Fossilised fixed-preverbial verbs {#sec:prefix-fossilised}
+
+Various fixed-preverbial verbs have stems that do not exist anymore in contemporary German. These stems have been lost from the German language, but were retained in a prefixed verbs. There are 65 such verbs (2%). They have been separated into two different groups below. First, some verbs simply have a stem without any contemporary stem (50 examples) as listed in [@next], like *verdauen* 'to digest' (though maybe connected etymologically to *tauen* 'to melt'). Second, some verbs have a stem that does not exist anymore, but there still exist a noun with the same prefix (15 examples) as listed in [@nnext], like the verb *beginnen* 'to start' and the noun *der Beginn* 'the start'. As noted previously, when verb and noun stems are identically it is often unclear in which direction this development evolved.
+
+There are various stems among these examples that are homonymous with other meanings in contemporary German (as noten in brackets in the lists below). For example, the verb *verdammen* 'to condemn' is a loan from Latin *damnare* and there is no relation to the noun *Damm* 'embankment'. Such different origins are not obvious for speakers and these examples thus seem ripe for folk etymologies.
+
+::: ex
+Fossilised verb stems:^[`SELECT * WHERE like(a.STAMM, "%- %") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".`]
+:::
 
 - *ahm* > *nach-ahm-en*
 - *bar* > *ge-bar-en*
@@ -138,7 +223,9 @@ fossilised verb roots (50 examples)^[SELECT * WHERE like(a.STAMM, "%- %") && (a.
 - *wöhn* > *ge-wöhn-en, ent-wöhn-en, ver-wöhn-en* (≠ *wohnen*)
 - *zicht* > *ver-zicht-en, be-zicht-ig-en*
 
-fossilised nouns (15)^[SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% (%") && !like(a.NOMEN, "% Ge- %").]
+::: ex
+Fossilised verb/noun roots:^[`SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% (%") && !like(a.NOMEN, "% Ge- %")`]
+:::
 
 - *bär* > *Ge-bär-de* > *gebärde-n*
 - *bühr* > *Ge-bühr* > *gebühr-en*
@@ -150,63 +237,75 @@ fossilised nouns (15)^[SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VERB, "%-
 - *mein* > *Ge-mein-de* > *ein-gemeinde-n* (≠ *meinen*)
 - *nunft* > *Ver-nunft* > *vernünft-el-n*
 - *sell* > *Ge-sell-e* > *geselle-n*
-- *spenst* > *Ge-spenst* > *Gespenst-er-n*
+- *spenst* > *Ge-spenst* > *gespenst-er-n*
 - *stalt* > *Ge-stalt* > *gestalt-en*
 - *wicht* > *Ge-wicht* > *gewicht-en*
 - *winn* > *Ge-winn* > *gewinn-en*
 
-similar, but with transparent root
+There are a few verbs that seem to belong to this last group, but there is a crucial difference in that the root without prefix does still exist in German [@next]. In these examples the verb is based on a noun stem starting with *Ge-* and this noun is in turn based on another root.
 
-die Lust > Ge-lüst > gelüst-en
-schaff-en > Ge-schäf-t > geschäft-en
-das Wetter > Ge-witter > gewitter-n
+::: ex
+Almost fossilised verb/noun roots:
+:::
 
-Fossilised adjective>verb
+- *die Lust* > *das Ge-lüst* > *gelüst-en*
+- *schaff-en* > *das Ge-schäf-t* > *geschäft-en*
+- *das Wetter* > *das Ge-witter* > *gewitter-n*
 
-- *sund* > *ge-sund* > *gesund-en*
+Finally, there is a single example of an adjective-based verb that appears to have a fossilised root, namely *gesunden* 'to recover' based on the adjective *gesund* 'healthy', which seems to have the typical *ge-* prefix and appears to be related to the Indo-european root \**sunto*.
 
-### Multiple fixed-affix verbs {#prefix:multiple}
+### Multiple fixed-affix verbs {#sec:prefix-multiple}
 
-Of special interest are three exceptional examples that appear to have a double fixed-prefix structure. These prefixes cannot be used individually, only in these exact combinations.
+Some of the previously discussed examples of fixed-preverbial verbs have an additional obligatory affix, i.e. the stem can only be used as a verb with multiple affixes attached. Of special interest are three exceptional examples that appear to have a double fixed-preverbial structure, as listed in [@next]. These preverbial cannot be used individually, only in these exact combinations.
 
-- *ein-ver-leib-en* (~ *der Leib*)
-- *ver-un-stalt-en* (~ *die Ge-stalt*)
-- *an-be-raum-en* (~ mhd. *ramen* ≠ *der Raum*)
+::: ex
+Double fixed-preverbial verbs:^[`SELECT * WHERE like(a.STAMM, "%- %- %") || like(a.VERB, "%- %- %")`]
+:::
 
-Slightly more frequent, but still highly exceptional, are verbs that have both a fixed-prefix and a fixed-suffix. There are 50 examples of such circumfixed verbs.
+- *Leib* > *ein-ver-leib-en*
+- *Ge-stalt* > *ver-un-stalt-en* 
+- mhd. *ram* ("Ziel") > *an-be-raum-en* (≠ *der Raum*)
 
-Circumfixed verbs | Frequency
-- | -
-Noun-based | 35^[SELECT * WHERE like(a.VERB, "%- % -% -%") && a.NOMEN != " ".]
-Adjective-based | 10^[SELECT * WHERE like(a.VERB, "%- % -% -%") && a.ADJEKTIV != " ".]
-Fossilised Stem | 5^[SELECT * WHERE like(a.STAMM, "%- % -%") && a.NOMEN == " " && a.ADJEKTIV == " " && a.WEITERE == " ".]
+Slightly more frequent, but still highly exceptional, are verbs that have both a fixed-preverbial and a fixed-suffix. There are 55 examples of such circumfixed verbs, summarised in [@tbl:prefix-circumfix]. More than half of these are constructed with the suffix *-ig* (30 examples).
 
-Most frequently
+| Circumfixed verbs | Frequency
+| ----- | :-:
+| Noun-based | 35 (1%)
+| Adjective-based | 10 (<1%)
+| Verb-based | 5 (<1%)
+| Fossilised Stem | 5 (<1%)
+| **Total** | **55** (2%)
 
-- Fixed-prefix nouns with suffix *-r*^[SELECT * WHERE like(a.VERB, "%- % -%r %") && a.NOMEN != " " ORDER BY a.STAMM.]
+Table: Obligatorily circumfixed verbs. {#tbl:prefix-circumfix}
+
+::: ex
+Circumfixed verbs with a noun stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") && a.NOMEN != " "`]
+:::
+
+- Fixed-preverbial nouns with suffix *-r*^[SELECT * WHERE like(a.VERB, "%- % -%r %") && a.NOMEN != " " ORDER BY a.STAMM.]
   - *Asche* > *ab/ein-äsche-r-n*
   - *Hede* > *ver-hedde-r-n*
   - *Knoch-en* > *ver-knöch-er-n*
   - *Scheiße* > *ver-scheiße-r-n*
   - *Stein* > *ver-stein-er-n*
   - *Weihrauch* > *be-weihräuch-er-n*
-- Fixed-prefix nouns with suffix *-l*^[SELECT * WHERE like(a.VERB, "%- % -%l %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-l*^[SELECT * WHERE like(a.VERB, "%- % -%l %") && a.NOMEN != " " ORDER BY a.STAMM.]
   - *Ast* > *ver-äst-el-n*
   - *Band* > *an-band-el-n*
   - *Heim* > *an-heim-el-n*
   - *Kast-en* > *ein-kast-el-n*
   - *Krag-en* > *ab-krag-el-n*
   - *Schande* > *ver-schande-l-n*
-- Fixed-prefix nouns with suffix *-s*^[SELECT * WHERE like(a.VERB, "%- % -s %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-s*^[SELECT * WHERE like(a.VERB, "%- % -s %") && a.NOMEN != " " ORDER BY a.STAMM.]
   - *Heim* > *ein-heim-s-en*
   - *Kork* > *ver-kork-s-en*
   - *Name* > *be-nam-s-en*
-- Fixed-prefix nouns with suffix *-ig*^[SELECT * WHERE like(a.VERB, "%- % -ig %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-ig*^[SELECT * WHERE like(a.VERB, "%- % -ig %") && a.NOMEN != " " ORDER BY a.STAMM.]
   - *Absicht* > *be-absicht-ig-en*
   - *Augenschein* > *be-augenschein-ig-en*
   - *Eid* > *be/ver-eid-ig-en*
   - *Erde* > *be-erd-ig-en*
-  - *Fried-en** > *be-fried-ig-en*
+  - *Fried-en* > *be-fried-ig-en*
   - *Gewalt* > *ver-gewalt-ig-en*
   - *Glaube* > *be-glaub-ig-en*
   - *Gnade* > *be-gnad-ig-en*
@@ -224,7 +323,9 @@ Most frequently
   - *Vollmacht* > *be-vollmächt-ig-en*
   - *Vorrecht* > *be-vorrecht-ig-en*
 
-Adjectives
+::: ex
+Circumfixed verbs with an adjective stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") && a.ADJEKTIV != " "`]
+:::
 
 - *fest* > *be/ver-fest-ig-en*
 - *gerade* > *be-grad-ig-en*
@@ -238,7 +339,19 @@ Adjectives
 - *gewiss* > *ver-gewiss-er-n*
 - *zart* > *ver-zärt-el-n*
 
-fossilised stems
+::: ex
+Circumfixed verbs with a verb stem:^[`SELECT * WHERE (like(a.VERB, "%- % -% -%") || (like(a.VERB, "%- %") && like(a.STAMM, "% -%"))) && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% Ge- %") || like(a.NOMEN, "% (%")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
+:::
+
+- *latsch-en* > *be-latsch-er-n*
+- *schaff-en* > *be-schäff-t-ig-en*
+- *schlaf-en* > *ein-schläf-er-n*
+- *walt-en* > *be-wält-ig-en*
+- *wieg-en* > *ab-wieg-el-n*
+
+::: ex
+Circumfixed verbs with a fossilised stem:^[`SELECT * WHERE like(a.STAMM, "%- % -%") && a.NOMEN == " " && a.ADJEKTIV == " " && a.WEITERE == " "`]
+:::
 
 - *ver-bas-el-n*
 - *be-hell-ig-en*
@@ -248,7 +361,7 @@ fossilised stems
 
 # Stems
 
-## Stem types
+## Where have all the verbs gone?
 
 Stems: total 3355
 
@@ -256,38 +369,26 @@ Mostly monosyllabic, or with unstressed second syllable -e/-el/-er/-ig/-lich. Ve
 
 recent loans from english: 187 (6%)
 
-Verbs: 1075 (32%)^[SELECT * WHERE (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".]
-Nouns: 1850 (55%)^[SELECT * WHERE a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%").]
-Adjektiv: 375 (11%)^[SELECT * WHERE a.ADJEKTIV != " ".]
-Weitere: 65 (2%)^[SELECT * WHERE a.WEITERE != " ".]
+Stem | Frequency
+---- | :-:
+Noun stem | 1850 (55%)^[`SELECT * WHERE a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`]
+Adjective stem | 375 (11%)^[`SELECT * WHERE a.ADJEKTIV != " "`]
+Other stem | 70 (2%)^[`SELECT * WHERE a.WEITERE != " "`]
+Stem without other usage | 1070 (32%)^[`SELECT * WHERE (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
+**Total** | **3355**
 
-Note: 10 Nomen+Adjektiv^[SELECT * WHERE a.NOMEN != " " && a.ADJEKTIV != " ".]
+The numbers in this table actually add up to 3365 because there are about 10 verbs that can both be analysed as having a noun stem or an adjective stem. These are counted twice: *fetten, grämen, ergreisen, harschen, latschen, lauten, lecken, schmücken*.^[`SELECT * WHERE a.NOMEN != " " && a.ADJEKTIV != " "`]
 
-Roots: 2765, very few homonymic roots (43)^[REGEX: 1.+\n.+2]
+Roots: 2765, e.g. *langen*, *längen*, *verlängern* *verlangsamen*
 
-±1075 verb stems^[SELECT * WHERE (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".]
+955 verb roots
 
-&& a.BEDEUTUNG == "Körperbewegung" (120)
-&& a.BEDEUTUNG == "Stimmgeräusch" (127)
-&& a.BEDEUTUNG == "Tiergeräusch" (37)
-&& a.BEDEUTUNG == "Dinggeräusch" (54)
-&& like(a.BEDEUTUNG, "%geräusch") (218)
+few homonymic roots (43)^[REGEX: 1.+\n.+2]
+e.g. *erlauben* vs. *entlauben*
 
-1850 noun stems^[SELECT * WHERE a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%").]
+## Internal stem structure
 
-semantics: most can be easily categorised, but a few are currently unclear
-
-- Resultative (750)^[&& (a.BEDEUTUNG == "Resultat" || a.BEDEUTUNG == "Resultat/Instrument" || a.BEDEUTUNG == "Resultat>Diminutiv" || a.BEDEUTUNG == "Resultat>Plural").]
-- Instrumental (430)^[&& (a.BEDEUTUNG == "Instrument" || a.BEDEUTUNG == "Resultat/Instrument" || a.BEDEUTUNG == "Instrument>Diminutiv" || a.BEDEUTUNG == "Instrument>Plural").]
-- Similative/Animate (190)^[&& like(a.BEDEUTUNG,"%Lebewesen%").]
-- Similative/Inanimate (135)^[&& (a.BEDEUTUNG == "Analogon" || a.BEDEUTUNG == "Analogon>Plural").]
-- Meronym (140)^[ && a.BEDEUTUNG == "Meronym".]
-- Locative (100)^[ && a.BEDEUTUNG == "Ort".]
-- Experience (40)^[ && a.BEDEUTUNG == "Empfindung".]
-- Consumption (20)^[ && a.BEDEUTUNG == "Verzehr".]
-- Unclear (50)^[&& a.BEDEUTUNG == "???".]
-
-## Vowel change
+### Vowel change
 
 Kausativ:
 
@@ -306,12 +407,21 @@ treten -> Tritt
 
 Verbs with Umlaut/Ablaut/Kausativ without l/r/s (27)^[SELECT * WHERE (like(a.STAMM, "%(%") || like(a.VERB, "%(%")) && !like(a.STAMM, "%-%") && !like(a.VERB, "% -% -%") && (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "%(%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".]
 
+- *dring-en* > *dräng-en*
+- *lieg-en* > *leg-en*
+- *schwing-en* > *schwenk-en*
+- *sitz-en* > *setz-en*
+- *ab-speck-en* > *spick-en*
+- *spring-en* > *spreng-en*
+- *suhl-en* > *siel-en*
+- *sühn-en* > *ver-söhn-en*
+- *wetter-n* > *witter-n*
+- *zwick-en* > *zwack-en*
+
 - *blaff-en* > *bläff-en*
 - *bluff-en* > *ver-blüff-en*
-- *dring-en* > *dräng-en*
 - *fall-en* > *fäll-en*
 - *kau-en* > *wieder-käu-en*
-- *lieg-en* > *leg-en*
 - *lupf-en* > *lüpf-en*
 - *makel-n* > *mäkel-n*
 - *nahr-en* > *nähr-en*
@@ -320,19 +430,11 @@ Verbs with Umlaut/Ablaut/Kausativ without l/r/s (27)^[SELECT * WHERE (like(a.STA
 - *sauf-en* > *er-säuf-en*
 - *saug-en* > *säug-en*
 - *schlurf-en* > *schlürf-en*
-- *schwing-en* > *schwenk-en*
-- *sitz-en* > *setz-en*
-- *ab-speck-en* > *spick-en*
-- *spring-en* > *spreng-en*
-- *suhl-en* > *siel-en*
-- *sühn-en* > *ver-söhn-en*
 - *sumpf-en* > *sümpf-en*
 - *tatsch-en* > *tätsch-en*
 - *tausch-en* > *täusch-en*
 - *wall-en* > *wäll-en*
-- *wetter-n* > *witter-n*
 - *zuck-en* > *zück-en*
-- *zwick-en* > *zwack-en*
 
 65 nouns both with and without umlaut
 
@@ -401,14 +503,19 @@ Verbs with Umlaut/Ablaut/Kausativ without l/r/s (27)^[SELECT * WHERE (like(a.STA
 - *die Zahl* > *zahl-en/zähl-en* (R-I)
 - *der Zahn* > *zahn-en/zähn-en* (R-I)
 
-## Morphologically complex stems
+### Morphologically complex stems
 
-very few complex stems (90 = 3%):
+very few complex stems
 
-- compound noun > verb (20)
-- affixed noun > verb (40)
-- compound noun > adjective > verb (10)
-- affixed adjective > verb (20)
+Morphological Structure | Frequency
+---- | :-:
+Affixed noun > verb | 40 (1%)
+Affixed adjective > verb | 20 (<1%)
+Compound noun > verb | 20 (<1%)
+Compound noun > adjective > verb | 10 (<1%)
+**Total** | **90** (3%)
+
+Table: Morphological structure of complex verb stems {#tbl:stem-morphology}
 
 Noun root compounds (20)^[SELECT * WHERE like(a.WURZEL, "%-%") && a.NOMEN != " ".]
 
@@ -484,7 +591,7 @@ Noun compounds > Adjective > Verb (10)^[SELECT * WHERE like(a.WURZEL, "%-%") && 
 
 - *Ein-heit* > *einheit-lich > *ver-einheitlich-en*
 - *Gegen-stand* > *gegenständ-lich* > *ver-gegenständlich-en*
-- *Gegen-wart* > *gegenwärtig* > *ver-gegenwärtig-en*
+- *Gegen-wart* > *gegenwärt-ig* > *ver-gegenwärtig-en*
 - *Nach-lass* > *nachläss-ig* > *ver-nachlässig-en*
 - *Nach-teil* > *nachteil-ig* > *be-nachteilig-en*
 - *Sinn-bild* > *sinnbild-lich* > *ver-sinnbildlich-en*
@@ -513,7 +620,7 @@ complex adjective > verb (20)^[SELECT * ORDER BY a.STAMM WHERE a.ADJEKTIV != " "
 - *ver-ein-bar* > *vereinbar-en*
 - *ver-laut-bar* > *verlautbar-en*
 - *viel-fach* > *ver-vielfach-en*
-- *voll-komm-en* > ver-vollkommn-en*
+- *voll-komm-en* > *ver-vollkommn-en*
 - *voll-ständ-ig* > *ver-vollständig-en*
 - *wahr-los* > *ver-wahrlos-en*
 
@@ -521,7 +628,7 @@ Adjective compound:
 
 - *schlimm-besser* > *ver-schlimmbesser-n*
 
-## Multisyllable simplex stems
+### Multisyllable simplex stems
 
 very few multisyllable stems, almost all loans (95, 3%)
 
@@ -633,7 +740,9 @@ Adjective/Other:
 - *empor* > *empör-en*
 - *genug* > *genüg-en*
 
-## Noun roots
+## Stem types
+
+### Noun stems {#sec:stem-noun}
 
 direction of derivation is variable
 
@@ -663,8 +772,21 @@ all other patterns are interesting
 
 additionally 160 Derived nouns (ge-, -ung, ablaut):^[SELECT * WHERE (like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% Ge- %") || like(a.NOMEN, "%(A)%")).]
 
-## Adjective roots
+1850 noun stems^[SELECT * WHERE a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%").]
 
+semantics: most can be easily categorised, but a few are currently unclear
+
+- Resultative (750)^[&& (a.BEDEUTUNG == "Resultat" || a.BEDEUTUNG == "Resultat/Instrument" || a.BEDEUTUNG == "Resultat>Diminutiv" || a.BEDEUTUNG == "Resultat>Plural").]
+- Instrumental (430)^[&& (a.BEDEUTUNG == "Instrument" || a.BEDEUTUNG == "Resultat/Instrument" || a.BEDEUTUNG == "Instrument>Diminutiv" || a.BEDEUTUNG == "Instrument>Plural").]
+- Similative/Animate (190)^[&& like(a.BEDEUTUNG,"%Lebewesen%").]
+- Similative/Inanimate (135)^[&& (a.BEDEUTUNG == "Analogon" || a.BEDEUTUNG == "Analogon>Plural").]
+- Meronym (140)^[ && a.BEDEUTUNG == "Meronym".]
+- Locative (100)^[ && a.BEDEUTUNG == "Ort".]
+- Experience (40)^[ && a.BEDEUTUNG == "Empfindung".]
+- Consumption (20)^[ && a.BEDEUTUNG == "Verzehr".]
+- Unclear (50)^[&& a.BEDEUTUNG == "???".]
+
+### Adjective stems {#sec:stem-adjective}
 
 219 out of about 300 monomorphemic adjectives: most are verbal roots (73%)!!! 
 
@@ -700,6 +822,18 @@ verensten
 - Wir verdoofen sie auch noch ein bißchen, denn Bildungsinvestitionen werfen nicht schnell genug was ab. https://taz.de/Wuetend-werden-reicht-nicht/!1436062/
 - Sich verernsten und still werden. https://benjamingerono.de/2023/03/29/dem-augenblicke-nicht-entfliehen-eine-gruendonnerstags-meditation/
 - das bier ist schon verherbt. Deutsches Wörterbuch von Jacob und Wilhelm Grimm. Lfg. 3 (1889), Bd. XII,I (1956), Sp. 562, Z. 27. https://www.dwds.de/wb/dwb/verherben
+
+### Other stems
+
+### Pure verb stems
+
+±1075 verb stems^[SELECT * WHERE (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " ".]
+
+&& a.BEDEUTUNG == "Körperbewegung" (120)
+&& a.BEDEUTUNG == "Stimmgeräusch" (127)
+&& a.BEDEUTUNG == "Tiergeräusch" (37)
+&& a.BEDEUTUNG == "Dinggeräusch" (54)
+&& like(a.BEDEUTUNG, "%geräusch") (218)
 
 # Suffixes
 
@@ -1282,11 +1416,11 @@ Other^[SELECT * WHERE (like(a.WURZEL, "%el %") || like(a.WURZEL, "%le %")) && a.
 - *brägel-n* ("brutzeln")
 - *buddel-n* ("graben")
 - *büffel-n* ("lernen")
-- (engl. *cancel* >) *cancel-n*
+- (en. *cancel* >) *cancel-n*
 - *daddel-n* ("spielen")
 - *dammel-n* ("trödeln")
 - *dibbel-n* ("säen")
-- (engl. *dribble* >) *dribbel-n*
+- (en. *dribble* >) *dribbel-n*
 - *drösel-n* ("aufknoten")
 - *drusel-n* ("schlummern")
 - *fissel-n* ("regnen")
@@ -1295,10 +1429,10 @@ Other^[SELECT * WHERE (like(a.WURZEL, "%el %") || like(a.WURZEL, "%le %")) && a.
 - *fuddel-n* ("pfuschen")
 - *fuschel-n* ("pfuschen")
 - *gammel-n* ("faulen")
-- (engl. *google* >) "googel-n* ("suchen")
+- (en. *google* >) "googel-n* ("suchen")
 - *griesel-n* ("erschauern")
 - *grübel-n* ("nachdenken")
-- (engl. *handle* >) *händel-n*
+- (en. *handle* >) *händel-n*
 - *hudel-n* ("pfuschen")
 - *kampel-n* ("raufen")
 - *kaupel-n* ("handeln")
@@ -1313,7 +1447,7 @@ Other^[SELECT * WHERE (like(a.WURZEL, "%el %") || like(a.WURZEL, "%le %")) && a.
 - *makel-n* ("vermitteln")
 - *meuchel-n* ("ermorden")
 - *mogel-n* ("schwindeln")
-- (engl. *nibble* >) *nibbel-n*
+- (en. *nibble* >) *nibbel-n*
 - *niesel-n* ("regnen")
 - *pichel-n* ("trinken")
 - *piesel-n* ("urin ausscheiden")
@@ -1323,7 +1457,7 @@ Other^[SELECT * WHERE (like(a.WURZEL, "%el %") || like(a.WURZEL, "%le %")) && a.
 - *pudel-n* ("daneben kegeln")
 - *pussel-n* ("arbeiten")
 - *rackel-n* ("laut des Rackelhuhn")
-- (engl. *recycle* >) *recycel-n*
+- (en. *recycle* >) *recycel-n*
 - *rödel-n* ("hart arbeiten")
 - *schibbel-n* ("rollen")
 - *schmunzel-n* ("lächeln")
@@ -1342,7 +1476,7 @@ Instrument > Use^[SELECT * WHERE like(a.WURZEL, "%el %") && like(a.STAMM, "%el %
 
 - (lat. *ampulla* >) *Ampel* > *be-ampel-n*
 - *Angel* > *angel-n*
-- (ital. *bin oculi* >) *Binokel* > *binokel-n* ("Kartenspiel mit doppeltem Blatt")
+- (it. *bin oculi* >) *Binokel* > *binokel-n* ("Kartenspiel mit doppeltem Blatt")
 - *Boßel* > *boßel-n*
 - (germ. \**þihsl* >) *Deichsel* > *deichsel-n*
 - (*Rudolf Diesel* >) *Diesel* > *diesel-n
@@ -1350,7 +1484,7 @@ Instrument > Use^[SELECT * WHERE like(a.WURZEL, "%el %") && like(a.STAMM, "%el %
 - *Feudel* > *feudel-n*
 - *Fiedel* > *fiedel-n*
 - (lat. *gabalus* >) *Gabel* > *gabel-n*
-- (ital. *gondola* >) *Gondel* > *gondel-n*
+- (it. *gondola* >) *Gondel* > *gondel-n*
 - (lat. *gurgulio* >) *Gurgel* > *gurgel-n*
 - *Hechel* > *hechel-n* ("mit der Hechel bearbeiten")
 - (lat. *capulum* >) *Kabel* > *kabel-n* ("telegrafieren")
@@ -1361,7 +1495,7 @@ Instrument > Use^[SELECT * WHERE like(a.WURZEL, "%el %") && like(a.STAMM, "%el %
 - *Knüttel* > *knüttel-n*
 - (lat. *cupella* >) *Kübel* > *kübel-n* ("viel trinken")
 - (lat. *cuminum* >) *Kümmel* > *kümmel-n*
-- (engl. *label* >) *Label* > *label-n*
+- (en. *label* >) *Label* > *label-n*
 - (lat. *mantellus* >) *Mantel* > *um-mantel-n*
 - *Marmel* > *marmel-n*
 - (lat. *margila* >) *Mergel* > *mergel-n*
@@ -1491,7 +1625,7 @@ Inanimate > Do like^[SELECT * WHERE like(a.WURZEL, "%el %") && like(a.STAMM, "%e
 - (lat. *mantellus* >) *Mantel* > *be-mäntel-n* ("verharmlosen")
 - (lat. *mobilis* >) *Möbel* > *ver-möbel-n* ("verprügeln")
 - (lat. *pendulus* >) *Pendel* > *pendel-n*
-- (engl. *pixel* >) *Pixel* > *ver-pixel-n*
+- (en. *pixel* >) *Pixel* > *ver-pixel-n*
 - *Rubel* > *rubel-n*
 - (lat. *aestivalia* >) *Stiefel* > *stiefel-n*
 - *Strudel* > *strudel-n*
@@ -1692,6 +1826,7 @@ No opposition (separate parallel origins from Noun)
 
 Movement > Repetition/Back and forth:^[SELECT * WHERE like(a.VERB, "% -%r %") && like(a.BEDEUTUNG, "%bewegung").]
 
+- *beb-en* > *bebb-er-n, bibb-er-n*
 - mnd. *bōn-en* > *bohn-er-n* ("putzen")
 - *poch-en* > *puck-er-n* ("pulsieren")
 - *schling-en* ("herumwickeln") > *schling-er-n* ("hin und her schwanken")
@@ -1859,14 +1994,14 @@ Process > Instrument > Use:^[SELECT * WHERE like(a.STAMM, "% -%r %") && a.BEDEUT
 - *fach-en* > *Fäch-er* > *fächer-n*
 - \**fado-jan* (germ. "nähren") > *Futt-er* > *futter-n*
 - \**fado-jan* (germ. "nähren") > *Futt-er* > *fütter-n*
-- *flip* (engl. ")
-- *grub* (engl. "graben") > *Grubb-er* ("Landwirtschaftsgerät")> *grubber-n*
+- *flip* (en. ")
+- *grub* (en. "graben") > *Grubb-er* ("Landwirtschaftsgerät")> *grubber-n*
 - *halt-en* > *Halt-er* > *halter-n* ("befestigen")
 - *halt-en* > *Hält-er* ("Behälter") > *hälter-n* ("Fische halten")
 - *heb-en* > *Heb-er* > *ab-heber-n*
 - *kap-en* (nl. "Seeräuberei treiben") > *Kaper* > *kaper-n*
-- *catch* (engl. "fangen") > *Kesch-er* ("Netz")> *kescher-n*
-- *kill* (engl. "töten") > *Tinten-kill-er* > *killer-n*
+- *catch* (en. "fangen") > *Kesch-er* ("Netz")> *kescher-n*
+- *kill* (en. "töten") > *Tinten-kill-er* > *killer-n*
 - *klemm-en* > *Klamm-er* *klammer-n*
 - *prang-en* (mnd. "drücken") > *Prang-er* ("Schandpfahl") > *an-pranger-n*
 - *puff-en* > *Puff-er* ("Zugabfederung") > *ab-puffer-n*
@@ -1880,7 +2015,7 @@ Process > Instrument > Use:^[SELECT * WHERE like(a.STAMM, "% -%r %") && a.BEDEUT
 - *stink-en* > *Stänk-er* *stänker-n*
 - *staub-en* > *Stöb-er* > *stöber-n*
 - *stech-en* > *Stoch-er* > *stocher-n*
-- *tack* (engl. "heften) > *Tack-er* > *tacker-n*
+- *tack* (en. "heften) > *Tack-er* > *tacker-n*
 
 Process > Result > Produce:^[SELECT * WHERE like(a.STAMM, "% -%r %") && a.BEDEUTUNG == "Resultat".]
 
@@ -2099,7 +2234,7 @@ Noise production (inanimate):^[SELECT * WHERE like(a.WURZEL, "%er ") && a.BEDEUT
 
 Others:^[SELECT * WHERE like(a.STAMM, "%er ") && !like(a.STAMM, "%ier ") && (a.NOMEN == " " || like(a.NOMEN, "% -ung ")) && a.ADJEKTIV == " " && a.WEITERE == " " && a.BEDEUTUNG == " ".]
 
-- (engl. *boulder* >) *boulder-n*
+- (en. *boulder* >) *boulder-n*
 - *dalber-n* ("herum albern")
 - (ahd. *demar* >) *dämmer-n*
 - *zer-depper-n* ("zerschlagen")
@@ -2123,12 +2258,12 @@ Others:^[SELECT * WHERE like(a.STAMM, "%er ") && !like(a.STAMM, "%ier ") && (a.N
 - *pläster-n* ("regnen")
 - *plemper-n* ("trödeln")
 - *puller-n* ("pinkeln")
-- (engl. *render* >) *render-n*
+- (en. *render* >) *render-n*
 - *scheuer-n* ("reiben")
 - *schluder-n* ("nachlässig arbeiten")
 - *schummer-n* ("dämmern")
 - *sicker-n* ("langsam durchfließen")
-- (engl. *simmer* >) *simmer-n* ("köcheln")
+- (en. *simmer* >) *simmer-n* ("köcheln")
 - *be-tüter-n* ("umsorgen")
 - (germ. \**waigar-ōn* >) *weiger-n*
 - (germ. \**wedra* >) *witter-n*
@@ -2149,32 +2284,32 @@ Instrument > Manner > Similative
 Instrument > Use:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Instrument".]
 
 - *Bagger* > *bagger-n*
-- (engl. *booster* >) *Booster* > *booster-n*
+- (en. *booster* >) *Booster* > *booster-n*
 - (lat. *bicarius* >) *Becher* > *becher-n*
-- (engl. *charter* >) *Charter* > *charter-n*
-- (engl. *computer* >) *Computer* > *computer-n*
+- (en. *charter* >) *Charter* > *charter-n*
+- (en. *computer* >) *Computer* > *computer-n*
 - (lat. *filtrum* >) *Filter* > *filter-n*
 - (ie. \**penku̯ro* >) *Finger* > *finger-n*
-- (engl. *flipper* >) *Flipper* > *flipper-n*
+- (en. *flipper* >) *Flipper* > *flipper-n*
 - (germ. \**hamara* >) *Hammer* > *hämmer-n*
 - *Heuer* > *an-heuer-n*
-- (engl. *inliner* >) *Inliner* > *inliner-n*
+- (en. *inliner* >) *Inliner* > *inliner-n*
 - (gr. *kathetḗr* >) *Katheter* > *katheter-n*
 - (lat. *calcatura* >) *Kelter* > *kelter-n*
-- (engl. *kicker* >) *Kicker* > *kicker-n*
+- (en. *kicker* >) *Kicker* > *kicker-n*
 - (mhd. *klīster* >) *Kleister* > *kleister-n*
 - (germ. \**kwerþraz* >) *Köder* > *köder-n*
-- (engl. *laser* >) *Laser* > *laser-n*
+- (en. *laser* >) *Laser* > *laser-n*
 - (germ. \**leþra* >) *Leder* > *leder-n*
 - (germ. \**hrīdrā* >) *Reiter* ("Sieb") > *durch-reiter-n*
 - (germ. \**rōþr* >) *Ruder* > *ruder-n*
 - *Schleuder* > *schleuder-n*
-- (engl. *shredder* >) *Schredder* > *schredder-n*
+- (en. *shredder* >) *Schredder* > *schredder-n*
 - (germ. \**skuldrō* >) *Schulter* > *schulter-n*
 - (germ. \**steurija* >) *Steuer* > *steuer-n*
-- (engl. *taser* >) *Taser* > *taser-n*
+- (en. *taser* >) *Taser* > *taser-n*
 - (lat. *traiectorium* >) *Trichter* > *trichter-n*
-- (engl. *trigger* >) *Trigger* > *trigger-n*
+- (en. *trigger* >) *Trigger* > *trigger-n*
 - (germ. \**teudr* >) *Tüder* > *tüder-n*
 - (germ. \**taubra* >) *Zauber* > *zauber-n*
 - (arab. *ṣifr* >) *Ziffer* > *ent-ziffer-n*
@@ -2204,15 +2339,15 @@ Ingredient > Cause to have:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG
 - *Schleier* > *ver-schleier-n*
 - (germ. \**silubara* >) *Silber* > *ver-silber-n*
 - (germ. \**watr* >) *Wasser* > *wässer-n*
-- (ital. *zucchero* >) *Zucker* > *zucker-n*
+- (it. *zucchero* >) *Zucker* > *zucker-n*
 
 Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resultat".]
 
 - (fr. *aventure* >) *Abenteuer* > *abenteuer-n*
 - (ie. \**altro* >) *Alter* > *alter-n*
 - (gr. *bū́s-tȳrós* >) *Butter* > *butter-n*
-- (engl. *cluster* >) *Cluster* > *cluster-n*
-- (engl. *cover* >) *Cover* > *cover-n*
+- (en. *cluster* >) *Cluster* > *cluster-n*
+- (en. *cover* >) *Cover* > *cover-n*
 - (lat. *durus* >) *Dauer* > *dauer-n*
 - (germ. \**aitra* >) *Eiter* > *eiter-n*
 - (*Essigäther* >) *Ester* > *ver-ester-n*
@@ -2220,7 +2355,7 @@ Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resul
 - (lat. *feria* >) *Feier* > *feier-n*
 - (gr. *pȳ́r* >) *Feuer* > *feuer-n*
 - (lat. *poletrus* >) *Folter* > *folter-n*
-- (engl. *gender* >) *Gender* > *gender-n*
+- (en. *gender* >) *Gender* > *gender-n*
 - (fr. *glacier* >) *Gletscher* > *ver-gletscher-n*
 - (ahd. *jāmar* >) *Jammer* > *jammer-n*
 - *Knitter* > *knitter-n*
@@ -2235,7 +2370,7 @@ Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resul
 - (fr. *ordre* >) *Order* > *order-n*
 - (span. *palabra* >) *Palaver* > *palaver-n*
 - *Polder* > *ein-polder-n*
-- (engl. *power* >) *Power* > *aus-power-n*
+- (en. *power* >) *Power* > *aus-power-n*
 - (lat. *pulvis/pulveris* >) *Pulver* > *pulver-n*
 - *Qualster* ("Schleim") > *qualster-n*
 - (lat. *rāster* >) *Raster* > *raster-n*
@@ -2244,7 +2379,7 @@ Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resul
 - *Schlummer* > *schlummer-n*
 - *Schober* > *schober-n*
 - (germ. \**sendra* >) *Sinter* > *sinter-n*
-- (engl. *spoiler* >) *Spoiler* > *spoiler-n*
+- (en. *spoiler* >) *Spoiler* > *spoiler-n*
 - (germ. \**wedra* >) *Wetter* > *wetter-n*
 - (germ. \**wentru* >) *Winter* > *über-winter-n*
 - (germ. \**wōkra* >) *Wucher* > *wucher-n*
@@ -2252,8 +2387,8 @@ Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resul
 Location > Use:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Ort".]
 
 - (lat. *ager*) > *Acker* > *acker-n*
-- (engl. *bunker* >) *Bunker* > *bunker-n*
-- (engl. *container* >) *Container* > *container-n*
+- (en. *bunker* >) *Bunker* > *bunker-n*
+- (en. *container* >) *Container* > *container-n*
 - *Gatter* > *er-gatter-n* ("Über ein Gatter empfangen")
 - (lat. *cellarium* >) *Keller* > *keller-n*
 - (lat. *carcer* >) *Kerker* > *ein-kerker-n*
@@ -2281,13 +2416,13 @@ Animate > Be like:^[SELECT * WHERE like(a.STAMM, "%r ") && !like(a.STAMM, "% -%r
 - (lat. *maior* >) *Meier* > *ab-meier-n*
 - (lat. *magister* >) *Meister* > *meister-n*
 - *Mutter* > *be-mutter-n*
-- (engl. *partner* >) *Partner* > *ver-partner-n*
+- (en. *partner* >) *Partner* > *ver-partner-n*
 - (lat. *peregrinus* >) *Pilger* > *pilger-n*
 - *Pracher* > *pracher-n*
 - *Reiher* > *reiher-n* ("kotzen wie ein Reiher")
 - *Schäker* > *schäker-n*
 - *Schwager* > *ver-schwäger-n*
-- (engl. *sponsor* >) *Sponsor* > *sponser-n*
+- (en. *sponsor* >) *Sponsor* > *sponser-n*
 - (lat. *tigris* >) *Tiger* > *tiger-n*
 - (gr. *pátrōs* >) *Vetter* > *an-vetter-n*
 
@@ -2296,12 +2431,12 @@ Inanimate > Do like:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "An
 - *Blubber* > *blubber-n*
 - (germ. \**feþrō* >) *Feder* > *feder-n* ("bewegen wie eine Feder")
 - *Flitter* > *flitter-n*
-- (engl. *canter* >) *Kanter* > *kanter-n*
+- (en. *canter* >) *Kanter* > *kanter-n*
 - *Klunker* > *klunker-n* ("hängen wie große Klunker")
 - *Kuller* > *kuller-n* ("rollen wie ein Kuller")
 - (gr. *lýra* >) *Leier* > *leier-n* ("drehen wie an einer Leier")
-- (engl. *monitor* >) *Monitor* > *monitor- en*
-- (engl. *poker* >) *Poker* > *poker-n*
+- (en. *monitor* >) *Monitor* > *monitor- en*
+- (en. *poker* >) *Poker* > *poker-n*
 
 Emotion > Perceive:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Empfindung".]
 
@@ -2525,7 +2660,7 @@ Only after consonant without t.^[SELECT * WHERE (like(a.WURZEL, "%s %") || like(
 - (pol. *kurzyk* > ) *quarz-en* ("rauchen")
 - *schnurps-en* ("abbeißen")
 - (mhd. *siuften* >) *seufzen*
-- (ital. *stravagante* > ) *strabanz-en* ("umherstreifen")
+- (it. *stravagante* > ) *strabanz-en* ("umherstreifen")
 - *strenz-en* ("stehlen")
 - *trenz-en* ("Tiergeräusch")
 - (germ. \**wahsjan* >) *wachs-en* ("größer werden")
@@ -2556,7 +2691,7 @@ remove regex: ^\| \S*[aeiouäöütsz](s|z|sch) .+\n
 - *Kauderwelsch* > *kauderwelsch-en* 
 - *Kranz* > *um/be-kränz-en* 
 - *Krebs* > *krebs-en*
-- (ital. *credenza* >) *Kredenz* > *kredenz-en*
+- (it. *credenza* >) *Kredenz* > *kredenz-en*
 - (germ. \**len-tī̌na* >) *Lenz* > *lenz-en*
 - *Luchs* > *luchs-en* 
 - (germ. \**malta* >) *Malz* > *malz-en*

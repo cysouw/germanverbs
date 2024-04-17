@@ -52,7 +52,7 @@
 | ast | ast | ver- äst -el -n (U) | der Ast | | | |Resultat|
 | atem | atem | atm -en | der Atem | | | |Resultat/Instrument|
 | atz | atz -el | atzel -n | die Atzel | | | |Lebewesen| "stehlen/Elster"
-| ätz | ätz | ätz -en | die Ätz -e | | | ~ essen |Instrument| "Säure"
+| atz | ätz (U) | ätz -en | die Ätz -e | | | ~ essen |Instrument| "Säure"
 | atz | atz | atz -en | die Atz -ung | | | ~ essen | | "Vogelbrut füttern"
 | aug-apfel | augapfel | be- augapfel -n | der Augapfel | | | |Analogon|
 | auge | auge | äuge -l -n (U) | | | | |Diminutiv|
@@ -78,8 +78,8 @@
 | ballhorn | ballhorn | ver- ballhorn -en | | | (Johann) Ballhorn | | |
 | balz | balz | balz -en | die Balz | | | |Analogon|
 | bammel | bammel | bammel -n | | | | |Körperbewegung|
-| band | bänd -er (U) | bänder -n | die Bänder | | | |Instrument>Plural|
 | band | bänd -el (U) | an- bändel -n | das Bändel | | | |Resultat|
+| band | bänd -er (U) | bänder -n | die Bänder | | | |Instrument>Plural|
 | band | band | an- band -el -n | das Band | | | |Resultat|
 | band | band | bänd -ig -en (U) | das Band | | | |Instrument|
 | bang | bang | bang -en | | bang | | | |
@@ -102,7 +102,8 @@
 | beam | beam | beam -en | der Beam | | | neues Lehnwort < en. |Instrument|
 | beat | beat | beat -en | der Beat | | | neues Lehnwort < en. |Resultat|
 | beb | beb | beb -en | die Beb -ung | | | | |
-| bebber | bebber | bebber -n | | | | ~ bibbern |Körperbewegung|
+| beb | bebb | bebb -er -n | | | | ~ beben, bibbern |Körperbewegung|
+| beb | bibb (A) | bibb -er -n | | | | |Körperbewegung|
 | becher | becher | becher -n | der Becher | | | ~ lat. bicarius |Instrument|
 | beere | beere | ab- beere -n | die Beere | | | |Resultat|
 | behr | ent- behr | entbehr -en | die Entbehr -ung | | | ~ gebären | |
@@ -133,7 +134,6 @@
 | beut | beut -el | beutel -n | der Beutel | | | < germ. \*bud-il |Instrument>Diminutiv|
 | beute 1 | beute | aus/er- beute -n | die Beute | | | < germ. \*beuda |Resultat|
 | beute 2 | beute | beute -n | die Beute | | | < germ. \*biūtjan |Ort| "Bienenunterkunft"
-| bibber | bibber | bibber -n | | | | |Körperbewegung|
 | bieder | bieder | an- bieder -n | | bieder | | < mhd. be-dürfen | |
 | bieg | beug (K) | beug -en | die Beug -e | | | ~ biegen |Resultat|
 | bieg | bieg | bieg -en | die Bieg -e | | | |Resultat|
@@ -275,7 +275,7 @@
 | buller | buller | buller -n | | | | |Dinggeräusch| "dröhnen"
 | bumm | bum | bum -s -en | | | bumm | |Dinggeräusch|
 | bumm | bumm | bumm -er -n | | | bumm | |Dinggeräusch| "lauf klopfen"
-| bummel | bummel | bummel -n | der Bummel | | | ~ bum |Resultat|
+| bummel | bummel | bummel -n | der Bummel | | | ~? bumm |Resultat|
 | bund | bünd -el (U) | bündel -n | das Bündel | | | |Resultat>Diminutiv|
 | bund | bund | ver- bünd -en (U) | der Bund | | | |Resultat|
 | bunker | bunker | bunker -n | der Bunker | | | 19. Jhd. Lehnwort < en. |Ort|
@@ -532,8 +532,8 @@
 | feder | feder | feder -n | die Feder | | | ~ germ. \*feþrō |Analogon|
 | feg | feg | feg -en | | | | | |
 | fehde | fehde | be- fehde -n | die Fehde | | | |???| "Fehde haben"
-| fehl 1 | be- fehl | befehl -ig -en | der Befehl | | | |???| "Befehlsgewalt haben"
 | fehl 1 | be- fehl | befehl -en | der Befehl | | | < germ. \*felhan ~ empfehlen |???|
+| fehl 1 | be- fehl | befehl -ig -en | der Befehl | | | |???| "Befehlsgewalt haben"
 | fehl 2 | fehl | fehl -en | der Fehl | | | Lehnwort < fr. faillir < lat. fallere |???| "ein Fehl haben"
 | fei | fei | fei -en | die Fei -ung | | | | |
 | feier | feier | feier -n | die Feier | | | Lehnwort < lat. feria |Resultat|
@@ -1440,7 +1440,7 @@
 | laut | laut | läut -en (U) | der Laut | | | |Resultat| "klingen"
 | laut | laut | laut -en | der Laut | laut | | |???| "einen Wortlaut haben"
 | laut | ver- laut -bar | verlautbar -en | | verlautbar | | | |
-| lauter | lauter | läuter -n (U) | | lauter | | ~ erläutern | | "reinigen"
+| lauter | lauter | läuter -n (U) | | lauter | | ~ erläutern < germ. \*hlūtra | | "reinigen"
 | leak | leak | leak -en | das Leak | | | neues Lehnwort < en. |Resultat|
 | lease | lease | lease -n | | | | neues Lehnwort < en. | |
 | leb | leb -end -ig | ver- lebendig -en | | lebendig | | ~ leben | |
@@ -1476,7 +1476,7 @@
 | leumund | leumd | ver- leumd -en | der Leumund | | | |Resultat|
 | leumund | leumund | be- leumund -en | der Leumund | | | |Resultat|
 | licht | leucht (K) | leucht -en | | licht | | | | "licht machen"
-| licht | licht | licht -el -n | das Licht | licht | | |Resultat| "Kerzen brennen"
+| licht | licht | licht -el -n | das Licht | | | |Resultat| "Kerzen brennen"
 | licht | licht | licht -en | | licht | | | | "heller werden"
 | lieb | lieb | lieb -el -n | | | | |Diminutiv|
 | lieb | lieb | lieb -en | | lieb | | | |
@@ -2046,7 +2046,7 @@
 | rauch | rauch | räuch -er -n (U) | der Rauch | | | |Instrument|
 | rauch | rauch | rauch -er -n | | | | |Verzehr| "Lust zu rauchen"
 | rauf | rauf | rauf -en | | | | | |
-| raum 1 | an- be- raum | anberaum -en | | | | ~ mhd. beramen ≠ Raum | |
+| raum 1 | an- be- raum | anberaum -en | | | | ~ mhd. ram "Ziel" ≠ Raum | |
 | raum 2 | raum | räum -en (U) | der Raum | | | |Resultat|
 | raun | raun | raun -en | | | | |Stimmgeräusch|
 | raun | raun | raun -z -en | | | | |Stimmgeräusch|
@@ -2728,6 +2728,7 @@
 | sput | sput | sput -en | | | | ~ nl. spoed |Körperbewegung| "beeilen"
 | staat | staat -lich | ver- staatlich -en | | staatlich | | | |
 | stadt | städt -er (U) | ver- städter -n | der Städter | | | |Ort>Lebewesen|
+| stadt | statt | ab/aus/be/er- statt -en | die Stadt | | | ~ Stätte, anstatt |Ort|
 | staffel | staffel | staffel -n | die Staffel | | | < germ. \*stapula |Instrument| "nach Staffel ordnen"
 | stahl | stahl | stähl -en (U) | das Stahl | | | |Analogon|
 | stak | stak | stak -en | der Stak -en | | | |Instrument| "mit einer Stake das Boot schieben"
@@ -2736,7 +2737,7 @@
 | stall | stall | ein- stall -en | der Stall | | | |Ort|
 | stalt | an- stalt | ver- anstalt -en | die Anstalt | | | |Resultat|
 | stalt | ge- stalt | gestalt -en | die Gestalt | | | |Lebewesen|
-| stalt | ver- un- stalt | verunstalt -en | die Verunstalt -ung | | | | |
+| stalt | stalt | ver- un- stalt -en | die Ge- stalt | | | | |
 | stamm | stamm | stamm -en | der Stamm | | | ~ abstammen |Analogon|
 | stamp | stampf | stampf -en | | | | < germ. \*stampōn |Körperbewegung|
 | stamp | stemp -el (U) | stempel -n | der Stempel | | | ~ stampfen |Instrument|
@@ -2752,8 +2753,7 @@
 | stark | stark | stärk -en (U) | | stark | | | |
 | starr | starr | starr -en | | starr | | | |
 | start | start | start -en | der Start | | | 20. Jhd. Lehnwort < en. |Resultat|
-| statt 1 | statt | ab/aus/be/er- statt -en | | | statt | ~ Stätte, Stadt | |
-| statt 2 | ge- statt | gestatt -en | | | | ~ Status | | "erlauben"
+| statt | ge- statt | gestatt -en | | | | ~ Status | | "erlauben"
 | stau | stau | stau -en | der Stau | | | |Resultat|
 | staub | staub | stäub -en (U) | der Staub | | | ~ stieben |Resultat|
 | staub | staub | staub -en | der Staub | | | ~ stieben |Resultat| "Staub produzieren"
@@ -3293,8 +3293,8 @@
 | zettel 2 | zettel | ver- zettel -n | der Zettel | | | Lehnwort < lat. cedula |Resultat| "Schriftstück"
 | zeug | zeug | zeug -en | die Zeug -ung | | | | | "hervorbringen"
 | zeuge | zeuge | zeuge -n | der Zeuge | | | |Lebewesen|
-| zicht | ver- zicht | verzicht -en | | | | ~ zeihen | |
 | zicht | be- zicht -ig | bezichtig -en | | | | ~ zeihen < ahd. *bizihtīg* "beschuldigend" | | "beschuldigen"
+| zicht | ver- zicht | verzicht -en | | | | ~ zeihen | |
 | zicke | zicke | zicke -n | die Zicke | | | neue Innovation |Lebewesen|
 | zickzack | zickzack | zickzack -en | das Zickzack | | | |Analogon|
 | zieh | zieh | zieh -en | die Zieh -ung | | | | |
