@@ -327,7 +327,6 @@ Circumfixed verbs with a noun stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") 
 Circumfixed verbs with an adjective stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") && a.ADJEKTIV != " "`]
 :::
 
-- *fest* > *be/ver-fest-ig-en*
 - *gerade* > *be-grad-ig-en*
 - *grob* > *an-grob-s-en*
 - *gut* > *be-güt-ig-en*
@@ -1917,6 +1916,7 @@ Result:^[SELECT * WHERE like(a.VERB, "% -%r %") && a.BEDEUTUNG == "Resultat".]
 - *Hede* ("Abfall von Flachs) > *ver-hedde-r-n* ("sich verfangen")
 - nd. *Jacht* ("Jagd") > *jacht-er-n* ("umherrennen")
 - *Kante* > *kente-r-n* ("sich auf die Kante legen")
+- *Kopie* > *kopie-r-en*
 - *Knochen* > *ver-knöch-er-n*
 - *Meute* > *meute-r-n*
 - ahd. *skeliva* ("Schuppe") > *schilf-er-n* ("sich schuppen")
