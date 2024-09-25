@@ -57,7 +57,7 @@ Sijs, Nicoline van der (samensteller) (2010), Etymologiebank, op https://etymolo
 
 Some verb stems only occur with a fixed preverbial, i.e. these verbs cannot occur without a preverbial. In total there are 685 such examples (20% of all verb stems), which come in various different guises. The major division is between transparant and fossilised fixed-preverbial verbs. Transparent fixed-preverbial verbs have a stem that exist elsewhere in the German language, while fossilised fixed-preverbial verbs have a stem that does not (anymore) exist outside of the preverbial combination. 
 
-The frequencies of the different kinds of fixed-preverbial verbs are summarised in [@tbl:fixed-prefix] and will be discussed in more detail in subsequent sections. First, the transparent fixed-preverbial verbs are summarised in [@sec:prefix-transparent] and the fossiled examples in [@sec:prefix-fossilised]. An extra subsection is added to summarise the few examples among these in which more than one affix is added obligatory, either two prefixes or a prefix and a suffix (see [@sec:prefix-multiple]).
+The frequencies of the different kinds of fixed-preverbial verbs are summarised in [@tbl:fixed-prefix] and will be discussed in more detail in subsequent sections. The transparent fixed-preverbial verbs are summarised in [@sec:prefix-transparent] and the fossiled examples in [@sec:prefix-fossilised]. An extra subsection is added to summarise the few examples among these in which more than one affix is added obligatory, either two prefixes or a prefix and a suffix (see [@sec:prefix-multiple]).
 
 | Fixed-prefix verbs | Frequency
 | ------ | :-:
@@ -71,15 +71,17 @@ The frequencies of the different kinds of fixed-preverbial verbs are summarised 
 
 Table: Different kinds of fixed-prefix structure {#tbl:fixed-prefix}
 
-Both non-separable prefixes and separable preverbs occur among the 685 fixed-preverbial verbs, but there is a clear preference for non-separable prefixes. There are 120 examples with separable preverbs, the majority of which have a noun stem [@next].
+Both non-separable prefixes and separable preverbs occur among the 685 fixed-preverbial verbs, but there is a clear preference for non-separable prefixes. There are only 120 examples with separable preverbs, the majority of which have a noun stem. These are summarised in [@next].
 
 ::: ex
 Fixed-preverbial verbs with separable preverbs:
 :::
 
-- Noun stem:
-  - 100 examples^[`SELECT * WHERE a.NOMEN != " " && like(a.VERB, "%- %") && !like(a.VERB, "%er- %") && !like(a.VERB, "%e- %") && !like(a.VERB, "%ent- %")`]
-- Adjective stem:
+- Noun stem (±100 examples), for example:^[`SELECT * WHERE a.NOMEN != " " && like(a.VERB, "%- %") && !like(a.VERB, "%er- %") && !like(a.VERB, "%e- %") && !like(a.VERB, "%ent- %")`]
+  - *Arm* > *um-arm-en*
+  - *Dose* > *ein-dose-n*
+  - *Himmel* > *an-himmel-n*
+- Adjective stem (10 examples):
   - *bieder* > *an-bieder-n*
   - *englisch* > *ein-englisch-en*
   - *flau* > *ab-flau-en*
@@ -91,31 +93,31 @@ Fixed-preverbial verbs with separable preverbs:
   - *streng* > *an-streng-en*
   - *stumpf* *ab-stumpf-en*
 - Other stem:
-  - *Rex* > *ein-rex-en*
-  - *wider* > *an-wider-n*
-  - *ix* > *durch-ix-en*
+  - *Rex* (name of company) > *ein-rex-en*
+  - *wider* (preposition) > *an-wider-n*
+  - *ix* (name of letter X) > *durch-ix-en*
 - Fossilised stem:
-  - *an-beraum-en*
-  - *aus-merz-en*
-  - *nach-ahm-en*
+  - *an-beraum-en* (< ahd. *rāmēn* "beabsichtigen")
+  - *aus-merz-en* (etymology unclear)
+  - *nach-ahme-n* (< mhd. *āme* "Flüssigkeitsmaß")
 - Loans:
   - *an-törn-en* (< en. "to turn on")
   - *aus-knock-en* (< en. "to knock out")
 
 ### Transparent fixed-preverbial verbs {#sec:prefix-transparent}
 
-The largest group of fixed-preverbial verbs are transparent, i.e they include a stem that exists elsewhere in the German language (620 examples, 18%).^[`SELECT * WHERE like(a.VERB, "%- %")`] Most frequently, these transparent prefix-verbs are based on a noun root (390 examples, 12%).^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`] For example, a noun like *Feind* 'enemy' can be used as a verb with various preverbials, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 390 examples are part of the total of 1850 verbs that have a noun stem (see [@sec:stem-noun]). The remaining 1460 noun-based verbs can also be used without any preverbial, like *trompeten* 'play the trumpet' from the noun *Trompete* 'trumpet.
+The largest group of fixed-preverbial verbs are transparent, i.e they include a stem that exists elsewhere in the German language (620 examples, 18% of all verb stems).^[`SELECT * WHERE like(a.VERB, "%- %")`] Most frequently, these transparent prefix-verbs are based on a noun root (390 examples, 12%).^[`SELECT * WHERE like(a.VERB, "%- %") && a.NOMEN != " " && !like(a.NOMEN, "% -ung %") && !like(a.NOMEN, "% Ge- %") && !like(a.NOMEN, "% (%")`] For example, a noun like *Feind* 'enemy' can be used as a verb with various preverbials, like *anfeinden* 'treat hostile', *befeinden* 'be hostile' or *verfeinden* 'be enemies'. In contrast, a verb \**feinden* without any preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 390 examples are part of the total of 1850 verbs that have a noun stem (see [@sec:stem-noun]). The remaining 1460 noun-based verbs can also be used without any preverbial, like *trompeten* 'play the trumpet' from the noun *Trompete* 'trumpet'.
 
-The second largest group are fixed-preverbial verbs based on an adjective root (195 examples, 6%).^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`] For example, an adjective like *dumm* 'stupid' can be used as a verb stem with a prefix *verdummen* 'become stultified'. In contrast, the verb \**dummen* without a preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 195 examples are part of a total of 375 verbs that have an adjective stem (see [@sec:stem-adjective]). The remaining 180 adjective-based verbs can also be used without any preverbial, like *dichten* 'to seal' from the adjective *dicht* 'air/watertight'.
+The second largest group are fixed-preverbial verbs based on an adjective root (195 examples, 6% of all verb stems).^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`] For example, an adjective like *dumm* 'stupid' can be used as a verb stem with a prefix *verdummen* 'become stultified'. In contrast, the verb \**dummen* without a preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 195 examples are part of a total of 375 verbs that have an adjective stem (see [@sec:stem-adjective]). The remaining 180 adjective-based verbs can also be used without any preverbial, like *dichten* 'to seal' from the adjective *dicht* 'air/watertight'.
 
-A small group of fixed-preverbial verbs have a different stem. This is a heterogeneous group of verb stems, listed in [@next]. Finally, there is a small group of fixed-preverbial verbs that are related to another verb without prefix, listed in [@nnext]. These fixed-preverbial verbs also have other morphological changes, either a change in the stem vowel or a change in the suffix.
+A small group of fixed-preverbial verbs have a different stem. This is a heterogeneous group of verb stems, listed in [@next]. Finally, there is a small group of fixed-preverbial verbs that are related to another verb without prefix, listed in [@nnext]. These fixed-preverbial verbs also have other morphological changes, either a change in the stem vowel (typically an Umlaut) and/or a change in the suffix.
 
 ::: ex
 Fixed-preverbial verbs based on other stems:^[`SELECT * WHERE like(a.VERB, "%- %") && a.WEITERE != " "`]
 :::
 
 - Name:
-  - *(Johann) Ballhorn* > *ver-ballhorn-en*
+  - *(Johann) Ballhorn (Personenname) * > *ver-ballhorn-en*
   - *Franz (Pilotenname)* > *ver-franz-en*
   - *Rex (Einmachgläser)* > *ein-rex-en*
   - *Zirze (Mythologische Figur)* > *be-zirze-n*
@@ -125,7 +127,7 @@ Fixed-preverbial verbs based on other stems:^[`SELECT * WHERE like(a.VERB, "%- %
   - *nein* > *ver-nein-en*
 - Prepostion:
   - *gegen* > *ent-gegn-en*
-  - *wider* > *er-wider-n*
+  - *wider* > *an/er-wider-n*
 - Adverb:
   - *genug* > *be-gnüg-en*
   - *nicht* > *ver-nicht-en*
@@ -168,7 +170,7 @@ Fixed-preverbial verbs with additional obligatory morphology:^[`SELECT * WHERE l
 
 ### Fossilised fixed-preverbial verbs {#sec:prefix-fossilised}
 
-Various fixed-preverbial verbs have stems that do not exist anymore in contemporary German. These stems have been lost from the German language, but were retained in a prefixed verbs. There are 65 such verbs (2%). They have been separated into two different groups below. First, some verbs simply have a stem without any contemporary stem (50 examples) as listed in [@next], like *verdauen* 'to digest' (though maybe connected etymologically to *tauen* 'to melt'). Second, some verbs have a stem that does not exist anymore, but there still exist a noun with the same prefix (15 examples) as listed in [@nnext], like the verb *beginnen* 'to start' and the noun *der Beginn* 'the start'. As noted previously, when verb and noun stems are identically it is often unclear in which direction this development evolved.
+Various fixed-preverbial verbs have stems that do not exist anymore in contemporary German. These stems have been lost from the German language, but were retained in a prefixed verbs. There are 65 such verbs (2% of all verb stems). They have been separated into two different groups below. First, some verbs simply have a stem without any contemporary stem (50 examples) as listed in [@next], like *verdauen* 'to digest' (though maybe connected etymologically to *tauen* 'to melt'). Second, some verbs have a stem that does not exist anymore, but there still exist a noun with the same prefix (15 examples) as listed in [@nnext], like the verb *beginnen* 'to start' and the noun *der Beginn* 'the start'. As noted previously, when verb and noun stems are identically it is often unclear in which direction this development evolved.
 
 There are various stems among these examples that are homonymous with other meanings in contemporary German (as noten in brackets in the lists below). For example, the verb *verdammen* 'to condemn' is a loan from Latin *damnare* and there is no relation to the noun *Damm* 'embankment'. Such different origins are not obvious for speakers and these examples thus seem ripe for folk etymologies.
 
@@ -272,11 +274,32 @@ Slightly more frequent, but still highly exceptional, are verbs that have both a
 | ----- | :-:
 | Noun-based | 35 (1%)
 | Adjective-based | 10 (<1%)
-| Verb-based | 5 (<1%)
+| Verb-based | 4 (<1%)
 | Fossilised Stem | 5 (<1%)
-| **Total** | **55** (2%)
+| **Total** | **54** (2%)
 
 Table: Obligatorily circumfixed verbs. {#tbl:prefix-circumfix}
+
+
+independent derivations?
+
+- *ver-kork-en* ("mit Korken versehen") > *ve-kork-s-en* ("in Unordnung bringen")
+- *ab-wieg-en* ("Gewicht feststellen") > *ab-wieg-el-n* ("beschwichtigen")
+- *ver-scheiß-en* ("mit Kot verschmutzen") > *ver-scheiß-er-n* ("zum Narren halten")
+- *be-latsch-en* ("mit Latschen versehen") > *be-latsch-er-n* ("überreden")
+- *be-erd-en* ("mit Erde versehen") > *be-erd-ig-en* ("begraben")
+- *be-fried-en* ("Frieden geben") > *be-fried-ig-en* ("zufriedenstellen")
+- *be-gnad-en* ("Privileg erteilen") > *be-gnad-ig-en* ("Straferlaß gewähren")
+- *ver-kost-en* ("prüfend schmecken") > *ver-köst-ig-en* ("mit Nahrung versehen")
+- *be-lob-en* ("ein Lob aussprechen") > *be-lob-ig-en* ("offiziell loben")
+- *be-schein-en* ("Licht strahlen") > *be-schein-ig-en* ("schriftlich bestätigen")
+- *be-teil-en* ("beschenken") > *be-teil-ig-en* ("teilhaben")
+
+same meaning?
+
+- *ver-stein-en* > *ver-stein-er-n* ("zu Stein werden")
+- *er-nieder-n* > *er-niedr-ig-en* ("herabwürdigen")
+- *be-schön-en* > *be-schön-ig-en* ("in besseren Licht erscheinen lassen")
 
 ::: ex
 Circumfixed verbs with a noun stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") && a.NOMEN != " "`]
@@ -344,7 +367,6 @@ Circumfixed verbs with a verb stem:^[`SELECT * WHERE (like(a.VERB, "%- % -% -%")
 
 - *latsch-en* > *be-latsch-er-n*
 - *schaff-en* > *be-schäff-t-ig-en*
-- *schlaf-en* > *ein-schläf-er-n*
 - *walt-en* > *be-wält-ig-en*
 - *wieg-en* > *ab-wieg-el-n*
 
@@ -730,14 +752,17 @@ Multisyllable nouns (65), note reduction, e.g. Atem>atmen, *Leumund* > *verleumd
 - *Urass* > *urass-en* 
 - *Zickzack* > *zickzack-en* (< fr. *zigzag*)
 
-Adjective/Other:
+Adjective:
 
-- *(Johann) Ballhorn* > *ver-ballhorn-en*
-- *(Henry) Bessemer* > *bessemer-n*
 - *bequem* > *bequem-en*
 - *bereit* > *bereit-en*
 - *empor* > *empör-en*
 - *genug* > *genüg-en*
+
+Name:
+
+- *(Johann) Ballhorn* > *ver-ballhorn-en*
+- *(Henry) Bessemer* > *bessemer-n*
 
 ## Stem types
 
@@ -1103,6 +1128,18 @@ Result > Produce:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Res
 - *Sport* > *sport-el-n*
 - *Suff* > *süff-el-n*
 
+Parts > Make into:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Meronym".]
+
+- *Kast-en* > *käst-el-n* ("mit Rechtecken bemustern")
+- *Krag-en* > *ab-krag-el-n* ("Hals umdrehen")
+- *Platte* > *plätte-l-n* ("mit Platten belegen")
+- *Quant* > *quant-el-n* ("in Quanten aufteilen")
+- *Rand* > *ränd-el-n* ("mit einem Rand versehen")
+- *Riefe* > *riefe-l-n* ("mit Riefen versehen")
+- *Sand* > *sand-el-n* ("mit Sand bestreuen")
+- *Strich* > *strich-el-n* ("mit kleine Striche versehen")
+- *Stück* > *stück-el-n* ("aus kleinen Stücken zusammensetzen")
+
 Animate > Be like:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Lebewesen".]
 
 - *Ahne* > *ähne-l-n* ("gleich aussehen")
@@ -1134,24 +1171,12 @@ Inanimate > Do like:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "
 - *Vernunft* > *vernünft-el-n* ("mit Vernunft argumentieren")
 - *Witz* > *witz-el-n* ("mit Witz sprechen")
 
-Ort^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Ort".]
+Location > Do something at:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Ort".]
 
 - *Grund* > *gründ-el-n* ("auf dem Grund von Gewässern nach Nahrung suchen")
 - *Kast-en* > *ein-kast-el-n ("einsperren")
 
-Dingteil^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Meronym".]
-
-- *Kast-en* > *käst-el-n* ("mit Rechtecken bemustern")
-- *Krag-en* > *ab-krag-el-n* ("Hals umdrehen")
-- *Platte* > *plätte-l-n* ("mit Platten belegen")
-- *Quant* > *quant-el-n* ("in Quanten aufteilen")
-- *Rand* > *ränd-el-n* ("mit einem Rand versehen")
-- *Riefe* > *riefe-l-n* ("mit Riefen versehen")
-- *Sand* > *sand-el-n* ("mit Sand bestreuen")
-- *Strich* > *strich-el-n* ("mit kleine Striche versehen")
-- *Stück* > *stück-el-n* ("aus kleinen Stücken zusammensetzen")
-
-Nahrung^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Verzehr".]
+Food > Consume:^[SELECT * WHERE like(a.VERB, "% -%l %") && a.BEDEUTUNG == "Verzehr".]
 
 - *Papp* > *päpp-el-n* ("mit Papp ernähren")
 - *Schnaps* > *schnäps-el-n* ("Schnaps trinken")
@@ -1511,7 +1536,7 @@ Instrument > Use^[SELECT * WHERE like(a.WURZEL, "%el %") && like(a.STAMM, "%el %
 - *Prügel* ("Stock") > *prügel-n*
 - *Rassel* > *rassel-n*
 - *Riegel* > *riegel-n*
-- *Riffel* ("Kamm*) > *riffel-n*
+- *Riffel* ("Kamm") > *riffel-n*
 - *Rodel* > *rodel-n*
 - *Säbel* > *säbel-n*
 - *Schaufel* > *schaufel-n*
@@ -2088,7 +2113,7 @@ Object > Agent (Similar human) > Be like:^[SELECT * WHERE like(a.STAMM, "% -%r %
 
 Plural:
 
-Listed here are verbs ending in *ern* that appear to be based on a plural noun ending in *-r*. These nouns are the regular plurals of the root nouns. To mark the plural, almost all examples below add a suffix *-er* to the noun root with an additional Umlaut for the roots with an [a/o/u] vowel. Only the plural *Bruder>Brüder* is derived from a singular that already ends in *er*. Also note that the plural forms *Ort>Örter* and *Scheit>Scheiter* are substandart.
+Listed here are verbs ending in *er-n* that appear to be based on a plural noun ending in *-r*. These nouns are the regular plurals of the root nouns. To mark the plural, almost all examples below add a suffix *-er* to the noun root with an additional Umlaut for the roots with an [a/o/u] vowel. Only the plural *Bruder>Brüder* is derived from a singular that already ends in *er*. Also note that the plural forms *Ort>Örter* and *Scheit>Scheiter* are substandart.
 
 Note that all the nouns ending in *-r* from the previous section have an unmarked plural, i.e. the singular and plural is identical. That means that those *er*-nouns also could be analysed as being plural. Or reversed, the *er* suffix for the nouns in this section just look like plurals, but are actually something different.
 
@@ -2132,7 +2157,7 @@ Inanimate > Plural > Do like:^[SELECT * WHERE like(a.STAMM, "% -%r %") && a.BEDE
 
 ### Adjective root > *r*-adjective stem
 
-Listed here are verbs ending in *ern* that have a comparative adjective as stem, which in turn is derived from an adjective root with the comparative suffix *-er*. There are two comparative adjectives that do not have a transparent root, namely *besser* 'better' and ahd. *furdir* 'further. Root vowels [a/o/u] get an *Umlaut*, except for *altern* 'to become old' (the comparative of *alt* 'old' has an *Umlaut*, viz. *älter* 'older).
+Listed here are verbs ending in *er-n* that have a comparative adjective as stem, which in turn is derived from an adjective root with the comparative suffix *-er*. There are two comparative adjectives that do not have a transparent root, namely *besser* 'better' and ahd. *furdir* 'further. Root vowels [a/o/u] get an *Umlaut*, except for *altern* 'to become old' (the comparative of *alt* 'old' has an *Umlaut*, viz. *älter* 'older).
 
 Semantically, these verbs are clearly causative/resultative, i.e. these verbs mean "to cause an object to become [adjective]", e.g. *mildern* 'to reduce' means *milder machen* 'make mild'. Note that the verbs *altern* 'to become old' and *bessern* 'to become better' seem to be mostly used in an anticausative meaning.
 
@@ -2384,7 +2409,7 @@ Result > Produce:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Resul
 - (germ. \**wentru* >) *Winter* > *über-winter-n*
 - (germ. \**wōkra* >) *Wucher* > *wucher-n*
 
-Location > Use:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Ort".]
+Location > Use location for:^[SELECT * WHERE like(a.WURZEL, "%r ") && a.BEDEUTUNG == "Ort".]
 
 - (lat. *ager*) > *Acker* > *acker-n*
 - (en. *bunker* >) *Bunker* > *bunker-n*
