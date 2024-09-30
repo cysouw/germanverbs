@@ -81,7 +81,7 @@ Fixed-preverbial verbs with separable preverbs:
   - *Arm* > *um-arm-en*
   - *Dose* > *ein-dose-n*
   - *Himmel* > *an-himmel-n*
-- Adjective stem (10 examples):
+- Adjective stem:
   - *bieder* > *an-bieder-n*
   - *englisch* > *ein-englisch-en*
   - *flau* > *ab-flau-en*
@@ -110,7 +110,7 @@ The largest group of fixed-preverbial verbs are transparent, i.e they include a 
 
 The second largest group are fixed-preverbial verbs based on an adjective root (195 examples, 6% of all verb stems).^[`SELECT * WHERE like(a.VERB, "%- %") && a.ADJEKTIV != " "`] For example, an adjective like *dumm* 'stupid' can be used as a verb stem with a prefix *verdummen* 'become stultified'. In contrast, the verb \**dummen* without a preverbial does not exist. Because of the large size of this group, these examples are not all listed here. These 195 examples are part of a total of 375 verbs that have an adjective stem (see [@sec:stem-adjective]). The remaining 180 adjective-based verbs can also be used without any preverbial, like *dichten* 'to seal' from the adjective *dicht* 'air/watertight'.
 
-A small group of fixed-preverbial verbs have a different stem. This is a heterogeneous group of verb stems, listed in [@next]. Finally, there is a small group of fixed-preverbial verbs that are related to another verb without prefix, listed in [@nnext]. These fixed-preverbial verbs also have other morphological changes, either a change in the stem vowel (typically an Umlaut) and/or a change in the suffix.
+A small group of fixed-preverbial verbs have a different stem. This is a heterogeneous group of verb stems, listed completely in [@next]. Finally, there is a small group of fixed-preverbial verbs that are related to another verb without prefix, listed completely in [@nnext]. These fixed-preverbial verbs also have other morphological changes, either a change in the stem vowel (typically an Umlaut) and/or a change in the suffix.
 
 ::: ex
 Fixed-preverbial verbs based on other stems:^[`SELECT * WHERE like(a.VERB, "%- %") && a.WEITERE != " "`]
@@ -170,7 +170,7 @@ Fixed-preverbial verbs with additional obligatory morphology:^[`SELECT * WHERE l
 
 ### Fossilised fixed-preverbial verbs {#sec:prefix-fossilised}
 
-Various fixed-preverbial verbs have stems that do not exist anymore in contemporary German. These stems have been lost from the German language, but were retained in a prefixed verbs. There are 65 such verbs (2% of all verb stems). They have been separated into two different groups below. First, some verbs simply have a stem without any contemporary stem (50 examples) as listed in [@next], like *verdauen* 'to digest' (though maybe connected etymologically to *tauen* 'to melt'). Second, some verbs have a stem that does not exist anymore, but there still exist a noun with the same prefix (15 examples) as listed in [@nnext], like the verb *beginnen* 'to start' and the noun *der Beginn* 'the start'. As noted previously, when verb and noun stems are identically it is often unclear in which direction this development evolved.
+Various fixed-preverbial verbs have stems that do not exist anymore in contemporary German. These stems have been lost from the German language, but were retained in a prefixed verbs. There are 65 such verbs (2% of all verb stems). They have been separated into two different groups below. First, some verbs simply have a stem without any contemporary stem (50 examples) as listed completely in [@next], like *verdauen* 'to digest' (though maybe connected etymologically to *tauen* 'to melt'). Second, some verbs have a stem that does not exist anymore, but there still exist a noun with the same prefix (15 examples) as listed completely in [@nnext], like the verb *beginnen* 'to start' and the noun *der Beginn* 'the start'. As noted previously, when verb and noun stems are identically it is often unclear in which direction this development evolved.
 
 There are various stems among these examples that are homonymous with other meanings in contemporary German (as noten in brackets in the lists below). For example, the verb *verdammen* 'to condemn' is a loan from Latin *damnare* and there is no relation to the noun *Damm* 'embankment'. Such different origins are not obvious for speakers and these examples thus seem ripe for folk etymologies.
 
@@ -244,7 +244,7 @@ Fossilised verb/noun roots:^[`SELECT * WHERE like(a.STAMM, "%- %") && !like(a.VE
 - *wicht* > *Ge-wicht* > *gewicht-en*
 - *winn* > *Ge-winn* > *gewinn-en*
 
-There are a few verbs that seem to belong to this last group, but there is a crucial difference in that the root without prefix does still exist in German [@next]. In these examples the verb is based on a noun stem starting with *Ge-* and this noun is in turn based on another root.
+There are a few verbs that might seem to belong to this last group, but there is a crucial difference in that the root without prefix does still exist in German. In these examples, listed in [@next], the verb is based on a noun stem starting with *Ge-* and this noun is in turn based on another root.
 
 ::: ex
 Almost fossilised verb/noun roots:
@@ -258,7 +258,9 @@ Finally, there is a single example of an adjective-based verb that appears to ha
 
 ### Multiple fixed-affix verbs {#sec:prefix-multiple}
 
-Some of the previously discussed examples of fixed-preverbial verbs have an additional obligatory affix, i.e. the stem can only be used as a verb with multiple affixes attached. Of special interest are three exceptional examples that appear to have a double fixed-preverbial structure, as listed in [@next]. These preverbial cannot be used individually, only in these exact combinations.
+Some of the previously discussed examples of fixed-preverbial verbs have an additional obligatory affix, i.e. the stem can only be used as a verb with multiple affixes attached. There are two groups of multiple-affixed verbs, namely double-prefixed verbs and circumfixed verbs.
+
+Of special interest are three exceptional examples that have a double fixed-preverbial structure, as listed completely in [@next]. These two preverbials cannot be used individually, only in these exact combinations.
 
 ::: ex
 Double fixed-preverbial verbs:^[`SELECT * WHERE like(a.STAMM, "%- %- %") || like(a.VERB, "%- %- %")`]
@@ -268,7 +270,7 @@ Double fixed-preverbial verbs:^[`SELECT * WHERE like(a.STAMM, "%- %- %") || like
 - *Ge-stalt* > *ver-un-stalt-en* 
 - mhd. *ram* ("Ziel") > *an-be-raum-en* (≠ *der Raum*)
 
-Slightly more frequent, but still highly exceptional, are verbs that have both a fixed-preverbial and a fixed-suffix. There are 55 examples of such circumfixed verbs, summarised in [@tbl:prefix-circumfix]. More than half of these are constructed with the suffix *-ig* (30 examples).
+Slightly more frequent, but still highly exceptional, are verbs that have both a fixed preverbial and a fixed suffix. There are 54 examples of such circumfixed verbs, summarised in [@tbl:prefix-circumfix] and listed completely in [@next] to [@nnnnext]. More than half of these are constructed with the suffix *-ig* (30 examples). Some of these verbs also might appear to exist without suffix, but these are parallel derivations, as argued at the end of this section.
 
 | Circumfixed verbs | Frequency
 | ----- | :-:
@@ -280,50 +282,29 @@ Slightly more frequent, but still highly exceptional, are verbs that have both a
 
 Table: Obligatorily circumfixed verbs. {#tbl:prefix-circumfix}
 
-
-independent derivations?
-
-- *ver-kork-en* ("mit Korken versehen") > *ve-kork-s-en* ("in Unordnung bringen")
-- *ab-wieg-en* ("Gewicht feststellen") > *ab-wieg-el-n* ("beschwichtigen")
-- *ver-scheiß-en* ("mit Kot verschmutzen") > *ver-scheiß-er-n* ("zum Narren halten")
-- *be-latsch-en* ("mit Latschen versehen") > *be-latsch-er-n* ("überreden")
-- *be-erd-en* ("mit Erde versehen") > *be-erd-ig-en* ("begraben")
-- *be-fried-en* ("Frieden geben") > *be-fried-ig-en* ("zufriedenstellen")
-- *be-gnad-en* ("Privileg erteilen") > *be-gnad-ig-en* ("Straferlaß gewähren")
-- *ver-kost-en* ("prüfend schmecken") > *ver-köst-ig-en* ("mit Nahrung versehen")
-- *be-lob-en* ("ein Lob aussprechen") > *be-lob-ig-en* ("offiziell loben")
-- *be-schein-en* ("Licht strahlen") > *be-schein-ig-en* ("schriftlich bestätigen")
-- *be-teil-en* ("beschenken") > *be-teil-ig-en* ("teilhaben")
-
-same meaning?
-
-- *ver-stein-en* > *ver-stein-er-n* ("zu Stein werden")
-- *er-nieder-n* > *er-niedr-ig-en* ("herabwürdigen")
-- *be-schön-en* > *be-schön-ig-en* ("in besseren Licht erscheinen lassen")
-
 ::: ex
 Circumfixed verbs with a noun stem:^[`SELECT * WHERE like(a.VERB, "%- % -% -%") && a.NOMEN != " "`]
 :::
 
-- Fixed-preverbial nouns with suffix *-r*^[SELECT * WHERE like(a.VERB, "%- % -%r %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-r*^[`SELECT * WHERE like(a.VERB, "%- % -%r %") && a.NOMEN != " " ORDER BY a.STAMM.`]
   - *Asche* > *ab/ein-äsche-r-n*
   - *Hede* > *ver-hedde-r-n*
   - *Knoch-en* > *ver-knöch-er-n*
   - *Scheiße* > *ver-scheiße-r-n*
   - *Stein* > *ver-stein-er-n*
   - *Weihrauch* > *be-weihräuch-er-n*
-- Fixed-preverbial nouns with suffix *-l*^[SELECT * WHERE like(a.VERB, "%- % -%l %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-l*^[`SELECT * WHERE like(a.VERB, "%- % -%l %") && a.NOMEN != " " ORDER BY a.STAMM.`]
   - *Ast* > *ver-äst-el-n*
   - *Band* > *an-band-el-n*
   - *Heim* > *an-heim-el-n*
   - *Kast-en* > *ein-kast-el-n*
   - *Krag-en* > *ab-krag-el-n*
   - *Schande* > *ver-schande-l-n*
-- Fixed-preverbial nouns with suffix *-s*^[SELECT * WHERE like(a.VERB, "%- % -s %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-s*^[`SELECT * WHERE like(a.VERB, "%- % -s %") && a.NOMEN != " " ORDER BY a.STAMM.`]
   - *Heim* > *ein-heim-s-en*
   - *Kork* > *ver-kork-s-en*
   - *Name* > *be-nam-s-en*
-- Fixed-preverbial nouns with suffix *-ig*^[SELECT * WHERE like(a.VERB, "%- % -ig %") && a.NOMEN != " " ORDER BY a.STAMM.]
+- Fixed-preverbial nouns with suffix *-ig*^[`SELECT * WHERE like(a.VERB, "%- % -ig %") && a.NOMEN != " " ORDER BY a.STAMM.`]
   - *Absicht* > *be-absicht-ig-en*
   - *Augenschein* > *be-augenschein-ig-en*
   - *Eid* > *be/ver-eid-ig-en*
@@ -380,9 +361,44 @@ Circumfixed verbs with a fossilised stem:^[`SELECT * WHERE like(a.STAMM, "%- % -
 - *ver-tick-er-n*
 - *be-zicht-ig-en*
 
+A few the circumfixed verbs listed above also seem to exist without a suffix, as listed below in [@next]. The meaning of these verbs suggest that there is no transparent derivation from the ones on the left (with prefixes) to the ones on the right (with both prefixed and suffixes).
+
+More problematic are the three examples listed in [@nnext]. There does not appear to be any obvious different in meaning between the prefixed version and the circumfixed version. This apparent synonymy still begs the question whether circumfixed version are derived from the prexifed version. I will refrain from taking a firm position on this question here.
+
+::: ex
+Apparent (but not transparent) relation between prefixed and circumfixed verbs:
+:::
+
+- *ver-kork-en* ("mit Korken versehen") ≠ *ve-kork-s-en* ("in Unordnung bringen")
+- *ab-wieg-en* ("Gewicht feststellen") ≠ *ab-wieg-el-n* ("beschwichtigen")
+- *ver-scheiß-en* ("mit Kot verschmutzen") ≠ *ver-scheiß-er-n* ("zum Narren halten")
+- *be-latsch-en* ("mit Latschen versehen") ≠ *be-latsch-er-n* ("überreden")
+- *be-erd-en* ("mit Erde versehen") ≠ *be-erd-ig-en* ("begraben")
+- *be-fried-en* ("Frieden geben") ≠ *be-fried-ig-en* ("zufriedenstellen")
+- *be-gnad-en* ("Privileg erteilen") ≠ *be-gnad-ig-en* ("Straferlaß gewähren")
+- *ver-kost-en* ("prüfend schmecken") ≠ *ver-köst-ig-en* ("mit Nahrung versehen")
+- *be-lob-en* ("ein Lob aussprechen") ≠ *be-lob-ig-en* ("offiziell loben")
+- *be-schein-en* ("Licht strahlen") ≠ *be-schein-ig-en* ("schriftlich bestätigen")
+- *be-teil-en* ("beschenken") ≠ *be-teil-ig-en* ("teilhaben")
+
+::: ex
+Possibly synonymous prefixed and circumfixed verbs.
+:::
+
+- *ver-stein-en* = *ver-stein-er-n* ("zu Stein werden")
+- *er-nieder-n* = *er-niedr-ig-en* ("herabwürdigen")
+- *be-schön-en* = *be-schön-ig-en* ("in besseren Licht erscheinen lassen")
+
 # Stems
 
 ## Where have all the verbs gone?
+
+How much verbs are there in German? Depending on the definition of what is a "verb" this question can be answered as anywhere between 20,000 and 1,000.
+
+The high estimate originates from the combined data of DWDS and Wiktionary, which when combined results in about 20,350 different verbs for contemporary German. Such listings will of course never be complete because additional morphologically complex examples can be quite productively produced by German speakers. So, a rough estimate of about 20,000 is a good number to cite at a party quiz, but linguistically it is of not much value. No single speaker of German knows all these verbs, and each speaker will be able to produced new verbs at will. The number of 20,000 is better seen as the size of the shared memory of a self-identified literate society of currently about 95 million German speakers.
+
+Linguistically the more interesting question is how many different verbal roots exist. As will be discussed below in great detail, the 20,350 verbs from DWDS and Wiktionary there are 1,070 unanalysable roots that can exclusivly be used as the basis for a verb. Of course, this number is likewise not set in stone. Some of those roots will become out-of-fashion and fade from the collective memory. Conversely, new roots will be introduced, most typically through loan processes, either as a direct loan or a calque. Complete de-novo introduction of verb roots seem rare, but it might happen, for example by onomatopoeic formation. As an estimate of this flexibility one can cite the 70 english loanwords introduced within the last few decades among the list of 1,070 unanalysable purely verbal roots.
+
 
 Stems: total 3355
 
@@ -398,7 +414,7 @@ Other stem | 70 (2%)^[`SELECT * WHERE a.WEITERE != " "`]
 Stem without other usage | 1070 (32%)^[`SELECT * WHERE (a.NOMEN == " " || like(a.NOMEN, "% -ung %") || like(a.NOMEN, "% (%") || like(a.NOMEN, "% Ge- %")) && a.ADJEKTIV == " " && a.WEITERE == " "`]
 **Total** | **3355**
 
-The numbers in this table actually add up to 3365 because there are about 10 verbs that can both be analysed as having a noun stem or an adjective stem. These are counted twice: *fetten, grämen, ergreisen, harschen, latschen, lauten, lecken, schmücken*.^[`SELECT * WHERE a.NOMEN != " " && a.ADJEKTIV != " "`]
+The numbers in this table actually add up to 3365 because there are 10 verbs that can both be analysed as having a noun stem or an adjective stem. These are counted twice: *fetten, grämen, ergreisen, harschen, latschen, lauten, lecken, schmücken*.^[`SELECT * WHERE a.NOMEN != " " && a.ADJEKTIV != " "`]
 
 Roots: 2765, e.g. *langen*, *längen*, *verlängern* *verlangsamen*
 
